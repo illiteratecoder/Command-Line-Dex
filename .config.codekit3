@@ -472,12 +472,6 @@
 		"oAP": "\/backend\/pokefinder.php",
 		"oF": 0
 		},
-	"\/backup.sql": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/backup.sql",
-		"oF": 0
-		},
 	"\/composer.json": {
 		"ft": 524288,
 		"oA": 1,
