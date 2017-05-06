@@ -8,9 +8,9 @@
 	)";
 
 	if ($conn->query($sql) === TRUE) {
-	    echo "Table types created successfully";
+	    echo "\nTable types created successfully";
 	} else {
-	    echo "Error creating table: " . $conn->error;
+	    echo "\nError creating table: " . $conn->error;
 	}
 
 	// Prepare statement and bind
@@ -27,7 +27,7 @@
 		$stmt->execute();
 	}
 
-	echo "New entries to table: types, added successfully";
+	echo "\n New entries to table: types, added successfully";
 
 	// Close the statement
 	$stmt->close();

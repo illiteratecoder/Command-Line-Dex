@@ -9,7 +9,7 @@
 	if ($conn->query($sql) === TRUE) {
 	    echo "\nTable names created successfully";
 	} else {
-	    echo "Error creating table: " . $conn->error;
+	    echo "\nError creating table: " . $conn->error;
 	}
 
 	// Prepare statement and bind
