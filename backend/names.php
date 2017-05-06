@@ -4,7 +4,7 @@
 	$name = $_GET['name'];
 
 	// MySql server info
-	require 'info.php';
+	require 'build_dbs/info.php';
 
 	// Create connection
 	$conn = new mysqli($servername, $username, $password, $dbname);
