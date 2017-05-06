@@ -2,35 +2,14 @@
 
 "use strict";
 
-function preloadImages(array) {
-    if (!preloadImages.list) {
-        preloadImages.list = [];
-    }
-    let list = preloadImages.list;
-    for (let i = 0; i < array.length; i++) {
-        let img = new Image();
-        img.onload = function() {
-            let index = list.indexOf(this);
-            if (index !== -1) {
-                // remove image from the array once it's loaded
-                // for memory consumption reasons
-                list.splice(index, 1);
-            }
-        }
-        list.push(img);
-        img.src = array[i];
-    }
+function createTemplate( string ) {
+	let newTemplate = document.createElement("template");
+	newTemplate.innerHTML = string;
+
+	return newTemplate.content.firstChild
 }
 
-let $imgArray = [];
-
-for (let i = 1; i<16; i++){
-	$imgArray.push("models/" + i + ".gif")
-}
-
-preloadImages($imgArray);
-
-let $n = null;  // number of current Pokemon
+let $n = null;  // number of the current Pokemon
 
 // Bind functions to the input command line and run when value changes
 document.querySelector( '[name="command"]' ).addEventListener( 'change', function() {
@@ -52,10 +31,11 @@ document.querySelector( '[name="command"]' ).addEventListener( 'change', functio
 	if ( $command === 'attack' ) {
 		$model.src = "models/" + $n + "-attack" + ".gif";
 
-        let newTemplate = document.createElement("template");
-        newTemplate.innerHTML = '<pre data-target="copy" data-opt="append">newPokemon.<span class="var-highlight">attack</span>();\n</pre>';
-		let typewriter = setupTypewriter(newTemplate.content.firstChild);
+        let content = '<pre data-target="copy" data-opt="append">newPokemon.<span class="var-highlight">attack</span>();\n</pre>';
+		content = createTemplate(content);
+		let typewriter = setupTypewriter(content);
 		typewriter.type();
+
 		return false
 	}
 
@@ -63,10 +43,11 @@ document.querySelector( '[name="command"]' ).addEventListener( 'change', functio
 	else if ( $command === 'relax' ) {
 		$model.src = "models/" + $n + ".gif";
 
-		let newTemplate = document.createElement("template");
-        newTemplate.innerHTML = '<pre data-target="copy" data-opt="append">newPokemon.<span class="var-highlight">relax</span>();\n</pre>';
-		let typewriter = setupTypewriter(newTemplate.content.firstChild);
+		let content = '<pre data-target="copy" data-opt="append">newPokemon.<span class="var-highlight">relax</span>();\n</pre>';
+		content = newTemplate(content);
+		let typewriter = setupTypewriter(content);
 		typewriter.type();
+
 		return false
 	}
 

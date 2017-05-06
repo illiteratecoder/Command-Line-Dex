@@ -37,9 +37,9 @@
 						<pre id="typewriter" data-target="copy" data-opt="append" style="display: none;">
 <span class="var-highlight">var</span> newPokemon = {
     name: <span id="pokename" class="string-highlight">'Bulbasaur'</span>,
-    number: <span class="int-highlight">1</span>,
-    type: [<span class="string-highlight">'Grass'</span>, <span class="string-highlight">'Poison'</span>],
-    species: <span class="string-highlight">'Seed Pokemon'</span>
+    number: <span id="pokenum" class="int-highlight">1</span>,
+    type: [<span id="poketype1" class="string-highlight">'Grass'</span>, <span id="poketype2" class="string-highlight">'Poison'</span>],
+    species: <span id="pokespecies" class="string-highlight">'Seed Pokemon'</span>
 };
 </pre>
 						<pre id="copy" class='target' style="height: 150px; overflow: auto;"></pre>
@@ -70,7 +70,7 @@
 			<script src="assets/js/main.js"></script>
 			<script src="assets/js/typewriter.js"></script>
 			<script src="assets/js/command_line.js"></script>
-
+			<script src="assets/js/preload_imgs.js"></script>
 
 	</body>
 </html>
