@@ -25,9 +25,8 @@ document.querySelector( '[name="command"]' ).addEventListener( 'change', functio
 		$model.src = "models/" + $n + "-attack" + ".gif";
 
         let newTemplate = document.createElement("template");
-        newTemplate.innerHTML = 'newPokemon.attack();';
-
-		let typewriter = setupTypewriter(newTemplate);
+        newTemplate.innerHTML = '<pre data-target="copy" data-opt="append">newPokemon.attack();</pre>';
+		let typewriter = setupTypewriter(newTemplate.content.firstChild);
 		typewriter.type();
 		return false
 	}
