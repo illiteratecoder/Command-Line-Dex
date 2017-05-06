@@ -1,0 +1,42 @@
+/* Dex */
+
+	#dex {
+		div#model-wrapper{
+			height: _size(dex-image);
+
+			position: relative;
+
+			> img#model {
+				position: absolute;
+				margin: 0 auto;
+				bottom: 5px;
+				right: 0;
+				left: 0;
+			}
+		}
+
+	}
+
+	.var-highlight{
+    	color: #02e2f7;
+	}
+	.string-highlight{
+	    color: #ff9e3d;
+	}
+	.int-highlight{
+		color: #a160d6;
+	}
+
+	.target{
+	        margin: 0;
+	        font-family: "Courier New";
+
+	        &:after{
+	            content: "|";
+	            @include keyframes('blink') {
+					0%{opacity: 0;}
+					100%{opacity: 1;}
+				};
+	            animation: blink 500ms linear infinite alternate;
+	        }
+	}
