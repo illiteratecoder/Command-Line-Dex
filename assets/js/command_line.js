@@ -25,7 +25,7 @@ document.querySelector( '[name="command"]' ).addEventListener( 'change', functio
 		$model.src = "models/" + $n + "-attack" + ".gif";
 
         let newTemplate = document.createElement("template");
-        newTemplate.innerHTML = '<pre data-target="copy" data-opt="append">newPokemon.<span class="var-highlight">attack</span>();</pre>';
+        newTemplate.innerHTML = '<pre data-target="copy" data-opt="append">newPokemon.<span class="var-highlight">attack</span>();\n</pre>';
 		let typewriter = setupTypewriter(newTemplate.content.firstChild);
 		typewriter.type();
 		return false
@@ -36,7 +36,7 @@ document.querySelector( '[name="command"]' ).addEventListener( 'change', functio
 		$model.src = "models/" + $n + ".gif";
 
 		let newTemplate = document.createElement("template");
-        newTemplate.innerHTML = '<pre data-target="copy" data-opt="append">newPokemon.<span class="var-highlight">relax</span>();</pre>';
+        newTemplate.innerHTML = '<pre data-target="copy" data-opt="append">newPokemon.<span class="var-highlight">relax</span>();\n</pre>';
 		let typewriter = setupTypewriter(newTemplate.content.firstChild);
 		typewriter.type();
 		return false
