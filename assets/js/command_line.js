@@ -45,7 +45,7 @@ document.querySelector( '[name="command"]' ).addEventListener( 'change', functio
 			document.getElementById('number').innerHTML = '#' + $re.id;
 		}
 	};
-	xhttp.open('GET', 'backend/names.php?name=' + $command, true);
+	xhttp.open('GET', '/app/backend/names.php?name=' + $command, true);
 	xhttp.send();
 
     var typewriter = document.getElementById('typewriter');
