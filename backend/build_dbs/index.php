@@ -10,7 +10,7 @@
 	}
 
 	// Call build files
-	require 'names_table.php';
+	require 'tables/names_table.php';
 
 	$conn->close();
 	
