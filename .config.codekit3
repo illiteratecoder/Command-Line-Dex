@@ -9,6 +9,18 @@
 	],
 "creatorBuild": "25813",
 "files": {
+	"\/.env": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/.env",
+		"oF": 0
+		},
+	"\/.gitignore": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/.gitignore",
+		"oF": 0
+		},
 	"\/assets\/css\/font-awesome.min.css": {
 		"aP": 1,
 		"bl": 0,
@@ -83,6 +95,15 @@
 		"mi": 0,
 		"oA": 0,
 		"oAP": "\/assets\/js\/main.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"\/assets\/js\/preload_imgs.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "\/assets\/js\/preload_imgs.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
@@ -391,36 +412,70 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"\/backend\/build_dbs\/data\/pokemon_names.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "\/backend\/build_dbs\/data\/pokemon_names-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
 	"\/backend\/build_dbs\/index.php": {
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/backend\/build_dbs\/index.php",
 		"oF": 0
 		},
-	"\/backend\/build_dbs\/php\/names_table.php": {
+	"\/backend\/build_dbs\/info.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/backend\/build_dbs\/php\/names_table.php",
+		"oAP": "\/backend\/build_dbs\/info.php",
 		"oF": 0
 		},
-	"\/backend\/info.php": {
+	"\/backend\/build_dbs\/tables\/data\/pokemon_names.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/backend\/build_dbs\/tables\/data\/pokemon_names-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/backend\/build_dbs\/tables\/data\/pokemon_species.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/backend\/build_dbs\/tables\/data\/pokemon_species-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/backend\/build_dbs\/tables\/data\/pokemon_types.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/backend\/build_dbs\/tables\/data\/pokemon_types-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/backend\/build_dbs\/tables\/names_table.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/backend\/info.php",
+		"oAP": "\/backend\/build_dbs\/tables\/names_table.php",
 		"oF": 0
 		},
-	"\/backend\/names.php": {
+	"\/backend\/build_dbs\/tables\/species_table.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/backend\/names.php",
+		"oAP": "\/backend\/build_dbs\/tables\/species_table.php",
+		"oF": 0
+		},
+	"\/backend\/build_dbs\/tables\/types_table.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/backend\/build_dbs\/tables\/types_table.php",
+		"oF": 0
+		},
+	"\/backend\/pokefinder.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/backend\/pokefinder.php",
+		"oF": 0
+		},
+	"\/backup.sql": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/backup.sql",
 		"oF": 0
 		},
 	"\/composer.json": {
@@ -447,19 +502,59 @@
 		"oAP": "\/index.php",
 		"oF": 0
 		},
+	"\/models\/1-attack.gif": {
+		"ft": 4194304,
+		"iS": 141134,
+		"oA": 0,
+		"oAP": "\/models\/1-attack.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/1-shiny.gif": {
+		"ft": 4194304,
+		"iS": 87560,
+		"oA": 0,
+		"oAP": "\/models\/1-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
 	"\/models\/1.gif": {
 		"ft": 4194304,
 		"iS": 86386,
 		"oA": 0,
 		"oAP": "\/models\/1.gif",
 		"oF": 0,
-		"opt": 0
+		"opt": 1
+		},
+	"\/models\/10-attack.gif": {
+		"ft": 4194304,
+		"iS": 112789,
+		"oA": 0,
+		"oAP": "\/models\/10-attack.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/10-shiny.gif": {
+		"ft": 4194304,
+		"iS": 80202,
+		"oA": 0,
+		"oAP": "\/models\/10-shiny.gif",
+		"oF": 0,
+		"opt": 1
 		},
 	"\/models\/10.gif": {
 		"ft": 4194304,
 		"iS": 81682,
 		"oA": 0,
 		"oAP": "\/models\/10.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/11-shiny.gif": {
+		"ft": 4194304,
+		"iS": 104435,
+		"oA": 0,
+		"oAP": "\/models\/11-shiny.gif",
 		"oF": 0,
 		"opt": 0
 		},
@@ -469,7 +564,15 @@
 		"oA": 0,
 		"oAP": "\/models\/11.gif",
 		"oF": 0,
-		"opt": 0
+		"opt": 1
+		},
+	"\/models\/12-shiny.gif": {
+		"ft": 4194304,
+		"iS": 194038,
+		"oA": 0,
+		"oAP": "\/models\/12-shiny.gif",
+		"oF": 0,
+		"opt": 1
 		},
 	"\/models\/12.gif": {
 		"ft": 4194304,
@@ -477,7 +580,23 @@
 		"oA": 0,
 		"oAP": "\/models\/12.gif",
 		"oF": 0,
-		"opt": 0
+		"opt": 1
+		},
+	"\/models\/13-attack.gif": {
+		"ft": 4194304,
+		"iS": 83958,
+		"oA": 0,
+		"oAP": "\/models\/13-attack.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/13-shiny.gif": {
+		"ft": 4194304,
+		"iS": 80146,
+		"oA": 0,
+		"oAP": "\/models\/13-shiny.gif",
+		"oF": 0,
+		"opt": 1
 		},
 	"\/models\/13.gif": {
 		"ft": 4194304,
@@ -485,7 +604,23 @@
 		"oA": 0,
 		"oAP": "\/models\/13.gif",
 		"oF": 0,
-		"opt": 0
+		"opt": 1
+		},
+	"\/models\/14-attack.gif": {
+		"ft": 4194304,
+		"iS": 126903,
+		"oA": 0,
+		"oAP": "\/models\/14-attack.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/14-shiny.gif": {
+		"ft": 4194304,
+		"iS": 142143,
+		"oA": 0,
+		"oAP": "\/models\/14-shiny.gif",
+		"oF": 0,
+		"opt": 1
 		},
 	"\/models\/14.gif": {
 		"ft": 4194304,
@@ -493,13 +628,53 @@
 		"oA": 0,
 		"oAP": "\/models\/14.gif",
 		"oF": 0,
-		"opt": 0
+		"opt": 1
+		},
+	"\/models\/15-mega-shiny.gif": {
+		"ft": 4194304,
+		"iS": 128279,
+		"oA": 0,
+		"oAP": "\/models\/15-mega-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/15-mega.gif": {
+		"ft": 4194304,
+		"iS": 128526,
+		"oA": 0,
+		"oAP": "\/models\/15-mega.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/15-shiny.gif": {
+		"ft": 4194304,
+		"iS": 385310,
+		"oA": 0,
+		"oAP": "\/models\/15-shiny.gif",
+		"oF": 0,
+		"opt": 1
 		},
 	"\/models\/15.gif": {
 		"ft": 4194304,
 		"iS": 384486,
 		"oA": 0,
 		"oAP": "\/models\/15.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/2-attack.gif": {
+		"ft": 4194304,
+		"iS": 281813,
+		"oA": 0,
+		"oAP": "\/models\/2-attack.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/2-shiny.gif": {
+		"ft": 4194304,
+		"iS": 141960,
+		"oA": 0,
+		"oAP": "\/models\/2-shiny.gif",
 		"oF": 0,
 		"opt": 0
 		},
@@ -511,6 +686,30 @@
 		"oF": 0,
 		"opt": 0
 		},
+	"\/models\/3-mega-shiny.gif": {
+		"ft": 4194304,
+		"iS": 466465,
+		"oA": 0,
+		"oAP": "\/models\/3-mega-shiny.gif",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/models\/3-mega.gif": {
+		"ft": 4194304,
+		"iS": 471368,
+		"oA": 0,
+		"oAP": "\/models\/3-mega.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/3-shiny.gif": {
+		"ft": 4194304,
+		"iS": 282328,
+		"oA": 0,
+		"oAP": "\/models\/3-shiny.gif",
+		"oF": 0,
+		"opt": 0
+		},
 	"\/models\/3.gif": {
 		"ft": 4194304,
 		"iS": 285411,
@@ -519,11 +718,43 @@
 		"oF": 0,
 		"opt": 0
 		},
+	"\/models\/4-attack.gif": {
+		"ft": 4194304,
+		"iS": 157015,
+		"oA": 0,
+		"oAP": "\/models\/4-attack.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/4-shiny.gif": {
+		"ft": 4194304,
+		"iS": 143613,
+		"oA": 0,
+		"oAP": "\/models\/4-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
 	"\/models\/4.gif": {
 		"ft": 4194304,
 		"iS": 144114,
 		"oA": 0,
 		"oAP": "\/models\/4.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/5-attack.gif": {
+		"ft": 4194304,
+		"iS": 171485,
+		"oA": 0,
+		"oAP": "\/models\/5-attack.gif",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/models\/5-shiny.gif": {
+		"ft": 4194304,
+		"iS": 144346,
+		"oA": 0,
+		"oAP": "\/models\/5-shiny.gif",
 		"oF": 0,
 		"opt": 0
 		},
@@ -533,7 +764,7 @@
 		"oA": 0,
 		"oAP": "\/models\/5.gif",
 		"oF": 0,
-		"opt": 0
+		"opt": 1
 		},
 	"\/models\/6-attack.gif": {
 		"ft": 4194304,
@@ -541,7 +772,47 @@
 		"oA": 0,
 		"oAP": "\/models\/6-attack.gif",
 		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/6-megax-shiny.gif": {
+		"ft": 4194304,
+		"iS": 256449,
+		"oA": 0,
+		"oAP": "\/models\/6-megax-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/6-megax.gif": {
+		"ft": 4194304,
+		"iS": 302631,
+		"oA": 0,
+		"oAP": "\/models\/6-megax.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/6-megay-shiny.gif": {
+		"ft": 4194304,
+		"iS": 238069,
+		"oA": 0,
+		"oAP": "\/models\/6-megay-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/6-megay.gif": {
+		"ft": 4194304,
+		"iS": 487220,
+		"oA": 0,
+		"oAP": "\/models\/6-megay.gif",
+		"oF": 0,
 		"opt": 0
+		},
+	"\/models\/6-shiny.gif": {
+		"ft": 4194304,
+		"iS": 190939,
+		"oA": 0,
+		"oAP": "\/models\/6-shiny.gif",
+		"oF": 0,
+		"opt": 1
 		},
 	"\/models\/6.gif": {
 		"ft": 4194304,
@@ -549,7 +820,23 @@
 		"oA": 0,
 		"oAP": "\/models\/6.gif",
 		"oF": 0,
-		"opt": 0
+		"opt": 1
+		},
+	"\/models\/7-attack.gif": {
+		"ft": 4194304,
+		"iS": 137818,
+		"oA": 0,
+		"oAP": "\/models\/7-attack.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/7-shiny.gif": {
+		"ft": 4194304,
+		"iS": 60197,
+		"oA": 0,
+		"oAP": "\/models\/7-shiny.gif",
+		"oF": 0,
+		"opt": 1
 		},
 	"\/models\/7.gif": {
 		"ft": 4194304,
@@ -557,7 +844,23 @@
 		"oA": 0,
 		"oAP": "\/models\/7.gif",
 		"oF": 0,
-		"opt": 0
+		"opt": 1
+		},
+	"\/models\/8-attack.gif": {
+		"ft": 4194304,
+		"iS": 227683,
+		"oA": 0,
+		"oAP": "\/models\/8-attack.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/8-shiny.gif": {
+		"ft": 4194304,
+		"iS": 90704,
+		"oA": 0,
+		"oAP": "\/models\/8-shiny.gif",
+		"oF": 0,
+		"opt": 1
 		},
 	"\/models\/8.gif": {
 		"ft": 4194304,
@@ -565,7 +868,39 @@
 		"oA": 0,
 		"oAP": "\/models\/8.gif",
 		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/9-attack.gif": {
+		"ft": 4194304,
+		"iS": 358475,
+		"oA": 0,
+		"oAP": "\/models\/9-attack.gif",
+		"oF": 0,
 		"opt": 0
+		},
+	"\/models\/9-mega-shiny.gif": {
+		"ft": 4194304,
+		"iS": 429899,
+		"oA": 0,
+		"oAP": "\/models\/9-mega-shiny.gif",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/models\/9-mega.gif": {
+		"ft": 4194304,
+		"iS": 435469,
+		"oA": 0,
+		"oAP": "\/models\/9-mega.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/9-shiny.gif": {
+		"ft": 4194304,
+		"iS": 375405,
+		"oA": 0,
+		"oAP": "\/models\/9-shiny.gif",
+		"oF": 0,
+		"opt": 1
 		},
 	"\/models\/9.gif": {
 		"ft": 4194304,
@@ -573,27 +908,12 @@
 		"oA": 0,
 		"oAP": "\/models\/9.gif",
 		"oF": 0,
-		"opt": 0
+		"opt": 1
 		},
-	"\/procfile": {
+	"\/Procfile": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/procfile",
-		"oF": 0
-		},
-	"\/test.js": {
-		"ft": 64,
-		"mi": 0,
-		"oA": 1,
-		"oAP": "\/test.js",
-		"oF": 1,
-		"sC": 0,
-		"tS": 0
-		},
-	"\/test.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/test.php",
+		"oAP": "\/Procfile",
 		"oF": 0
 		}
 	},

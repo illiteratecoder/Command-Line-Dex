@@ -12,7 +12,8 @@
 	// Call build files
 	require 'tables/names_table.php';
 	require 'tables/types_table.php';
-	
+	require 'tables/species_table.php';
+
 	$conn->close();
 	
 ?>

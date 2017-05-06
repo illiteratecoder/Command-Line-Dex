@@ -23,7 +23,7 @@
 	for ($i = 0; $i < count($json); $i++){
 		$id = $i + 1;
 		$type1 = $json[$i][0];
-		$type1 = $json[$i][1] | null;
+		$type2 = $json[$i][1];
 		$stmt->execute();
 	}
 

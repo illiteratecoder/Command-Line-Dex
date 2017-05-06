@@ -1,6 +1,6 @@
 <?php
-	$servername = 'us-cdbr-iron-east-03.cleardb.net';
-	$username = 'b13958378ca589';
-	$password = '51be59bc';
-	$dbname = 'heroku_6f71a327d027584';
+	$servername = 'jsk3f4rbvp8ayd7w.cbetxkdyhwsb.us-east-1.rds.amazonaws.com';
+	$username = 'tbkzwapnl7zbvu9k';
+	$password = 'u4ndh2q3a97w0jii';
+	$dbname = 'zzqsiqznda2rxylc';
 ?>
