@@ -7,7 +7,7 @@
 	)";
 
 	if ($conn->query($sql) === TRUE) {
-	    echo "Table names created successfully";
+	    echo "\nTable names created successfully";
 	} else {
 	    echo "Error creating table: " . $conn->error;
 	}
@@ -25,7 +25,7 @@
 		$stmt->execute();
 	}
 
-	echo "New entries added successfully";
+	echo "\n New entries to table: names, added successfully";
 
 	// Close the statement
 	$stmt->close();

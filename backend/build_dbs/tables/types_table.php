@@ -27,7 +27,7 @@
 		$stmt->execute();
 	}
 
-	echo "New entries added successfully";
+	echo "New entries to table: types, added successfully";
 
 	// Close the statement
 	$stmt->close();
