@@ -17,7 +17,7 @@
 	$stmt->bind_param("is", $id, $name);  // One int (i), one string (s)
 
 	// Set parameters and execute statement
-	$json = json_decode(file_get_contents("./data/pokemon_names.json"), true);
+	$json = json_decode(file_get_contents("data/pokemon_names.json"), true);
 
 	for ($i = 0; $i < count($json); $i++){
 		$id = $i + 1;
