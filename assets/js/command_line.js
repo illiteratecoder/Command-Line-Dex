@@ -23,6 +23,12 @@ document.querySelector( '[name="command"]' ).addEventListener( 'change', functio
 	// Attack command
 	if ( $command === 'attack' ) {
 		$model.src = "models/" + $n + "-attack" + ".gif";
+
+        let newTemplate = document.createElement("template");
+        newTemplate.innerHTML = 'newPokemon.attack();';
+
+		let typewriter = setupTypewriter(newTemplate);
+		typewriter.type();
 		return false
 	}
 
