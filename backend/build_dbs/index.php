@@ -1,6 +1,6 @@
 <?php
 
-	require './info.php';
+	require '.:/app/.heroku/php/lib/php/info.php';
 
 	// Create connection
 	$conn = new mysqli($servername, $username, $password, $dbname);
