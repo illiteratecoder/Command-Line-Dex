@@ -83,12 +83,27 @@
 		},
 	"\/assets\/js\/command_line.js": {
 		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/assets\/js\/command_line.min.js",
+		"oF": 2,
+		"sC": 3,
+		"tS": 1
+		},
+	"\/assets\/js\/command_line.min.js": {
+		"ft": 64,
 		"mi": 0,
 		"oA": 0,
-		"oAP": "\/assets\/js\/command_line.js",
+		"oAP": "\/assets\/js\/command_line.min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
+		},
+	"\/assets\/js\/command_line.min.js.map": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/assets\/js\/command_line.min.js.map",
+		"oF": 0
 		},
 	"\/assets\/js\/main.js": {
 		"ft": 64,
@@ -472,13 +487,32 @@
 		"oAP": "\/backend\/pokefinder.php",
 		"oF": 0
 		},
-	"\/composer.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "\/composer-min.json",
+	"\/images\/ball-shake.gif": {
+		"ft": 4194304,
+		"iS": 12077,
+		"oA": 0,
+		"oAP": "\/images\/ball-shake.gif",
 		"oF": 0,
-		"oO": 0,
-		"oS": 1
+		"opt": 0
+		},
+	"\/images\/ball-spin.gif": {
+		"ft": 4194304,
+		"iS": 22040,
+		"oA": 0,
+		"oAP": "\/images\/ball-spin.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/images\/ball.png": {
+		"ft": 32768,
+		"iS": 22832,
+		"oA": 0,
+		"oAP": "\/images\/ball.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/images\/paper.jpg": {
 		"ft": 16384,
@@ -490,15 +524,24 @@
 		"opt": 0,
 		"q": 100
 		},
-	"\/index.php": {
+	"\/index.html": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/index.php",
+		"oAP": "\/index.html",
 		"oF": 0
+		},
+	"\/index.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "\/index.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
 		},
 	"\/models\/1-attack.gif": {
 		"ft": 4194304,
-		"iS": 141134,
+		"iS": 62667,
 		"oA": 0,
 		"oAP": "\/models\/1-attack.gif",
 		"oF": 0,
@@ -506,11 +549,11 @@
 		},
 	"\/models\/1-shiny.gif": {
 		"ft": 4194304,
-		"iS": 87560,
+		"iS": 40814,
 		"oA": 0,
 		"oAP": "\/models\/1-shiny.gif",
 		"oF": 0,
-		"opt": 1
+		"opt": 0
 		},
 	"\/models\/1.gif": {
 		"ft": 4194304,
@@ -544,19 +587,403 @@
 		"oF": 0,
 		"opt": 1
 		},
+	"\/models\/100-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/100-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/100.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/100.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/101-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/101-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/101.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/101.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/102-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/102-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/102.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/102.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/103-alola-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/103-alola-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/103-alola.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/103-alola.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/103-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/103-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/103.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/103.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/104-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/104-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/104.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/104.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/105-alola-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/105-alola-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/105-alola.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/105-alola.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/105-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/105-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/105.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/105.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/106-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/106-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/106.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/106.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/107-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/107-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/107.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/107.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/108-attack.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/108-attack.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/108-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/108-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/108.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/108.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/109-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/109-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/109.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/109.gif",
+		"oF": 0,
+		"opt": 1
+		},
 	"\/models\/11-shiny.gif": {
 		"ft": 4194304,
 		"iS": 104435,
 		"oA": 0,
 		"oAP": "\/models\/11-shiny.gif",
 		"oF": 0,
-		"opt": 0
+		"opt": 1
 		},
 	"\/models\/11.gif": {
 		"ft": 4194304,
 		"iS": 110604,
 		"oA": 0,
 		"oAP": "\/models\/11.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/110-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/110-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/110.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/110.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/111-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/111-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/111.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/111.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/112-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/112-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/112.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/112.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/113-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/113-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/113.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/113.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/114-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/114-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/114.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/114.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/115-mega-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/115-mega-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/115-mega.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/115-mega.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/115-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/115-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/115.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/115.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/116-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/116-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/116.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/116.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/117-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/117-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/117.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/117.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/118-attack.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/118-attack.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/118-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/118-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/118.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/118.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/119-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/119-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/119.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/119.gif",
 		"oF": 0,
 		"opt": 1
 		},
@@ -576,6 +1003,198 @@
 		"oF": 0,
 		"opt": 1
 		},
+	"\/models\/120-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/120-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/120.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/120.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/121-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/121-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/121.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/121.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/122-attack.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/122-attack.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/122-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/122-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/122.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/122.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/123-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/123-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/123.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/123.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/124-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/124-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/124.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/124.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/125-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/125-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/125.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/125.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/126-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/126-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/126.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/126.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/127-mega-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/127-mega-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/127-mega.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/127-mega.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/127-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/127-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/127.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/127.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/128-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/128-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/128.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/128.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/129-attack.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/129-attack.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/129-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/129-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/129.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/129.gif",
+		"oF": 0,
+		"opt": 1
+		},
 	"\/models\/13-attack.gif": {
 		"ft": 4194304,
 		"iS": 83958,
@@ -590,13 +1209,229 @@
 		"oA": 0,
 		"oAP": "\/models\/13-shiny.gif",
 		"oF": 0,
-		"opt": 1
+		"opt": 0
 		},
 	"\/models\/13.gif": {
 		"ft": 4194304,
 		"iS": 90950,
 		"oA": 0,
 		"oAP": "\/models\/13.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/130-attack.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/130-attack.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/130-mega-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/130-mega-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/130-mega.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/130-mega.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/130-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/130-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/130.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/130.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/131-attack.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/131-attack.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/131-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/131-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/131.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/131.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/132-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/132-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/132.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/132.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/133-attack.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/133-attack.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/133-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/133-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/133.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/133.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/134-attack.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/134-attack.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/134-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/134-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/134.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/134.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/135-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/135-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/135.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/135.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/136-attack.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/136-attack.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/136-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/136-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/136.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/136.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/137-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/137-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/137.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/137.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/138-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/138-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/138.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/138.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/139-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/139-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/139.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/139.gif",
 		"oF": 0,
 		"opt": 1
 		},
@@ -621,6 +1456,206 @@
 		"iS": 145521,
 		"oA": 0,
 		"oAP": "\/models\/14.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/140-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/140-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/140.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/140.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/141-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/141-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/141.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/141.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/142-attack.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/142-attack.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/142-mega-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/142-mega-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/142-mega.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/142-mega.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/142-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/142-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/142.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/142.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/143-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/143-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/143.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/143.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/144-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/144-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/144.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/144.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/145-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/145-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/145.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/145.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/146-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/146-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/146.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/146.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/147-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/147-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/147.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/147.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/148-attack.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/148-attack.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/148-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/148-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/148.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/148.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/149-attack.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/149-attack.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/149-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/149-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/149.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/149.gif",
 		"oF": 0,
 		"opt": 1
 		},
@@ -656,13 +1691,181 @@
 		"oF": 0,
 		"opt": 1
 		},
+	"\/models\/150-megax-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/150-megax-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/150-megax.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/150-megax.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/150-megay-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/150-megay-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/150-megay.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/150-megay.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/150-shiny.gif": {
+		"ft": 4194304,
+		"iS": 170141,
+		"oA": 0,
+		"oAP": "\/models\/150-shiny.gif",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/models\/150.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/150.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/151-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/151-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/151.gif": {
+		"ft": 4194304,
+		"iS": 76663,
+		"oA": 0,
+		"oAP": "\/models\/151.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/16-shiny.gif": {
+		"ft": 4194304,
+		"iS": 40641,
+		"oA": 0,
+		"oAP": "\/models\/16-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/16.gif": {
+		"ft": 4194304,
+		"iS": 43455,
+		"oA": 0,
+		"oAP": "\/models\/16.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/17-shiny.gif": {
+		"ft": 4194304,
+		"iS": 52884,
+		"oA": 0,
+		"oAP": "\/models\/17-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/17.gif": {
+		"ft": 4194304,
+		"iS": 55373,
+		"oA": 0,
+		"oAP": "\/models\/17.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/18-attack.gif": {
+		"ft": 4194304,
+		"iS": 228642,
+		"oA": 0,
+		"oAP": "\/models\/18-attack.gif",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/models\/18-mega-shiny.gif": {
+		"ft": 4194304,
+		"iS": 172117,
+		"oA": 0,
+		"oAP": "\/models\/18-mega-shiny.gif",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/models\/18-mega.gif": {
+		"ft": 4194304,
+		"iS": 169947,
+		"oA": 0,
+		"oAP": "\/models\/18-mega.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/18-shiny.gif": {
+		"ft": 4194304,
+		"iS": 173973,
+		"oA": 0,
+		"oAP": "\/models\/18-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/18.gif": {
+		"ft": 4194304,
+		"iS": 178117,
+		"oA": 0,
+		"oAP": "\/models\/18.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/19-alola-shiny.gif": {
+		"ft": 4194304,
+		"iS": 37623,
+		"oA": 0,
+		"oAP": "\/models\/19-alola-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/19-alola.gif": {
+		"ft": 4194304,
+		"iS": 36799,
+		"oA": 0,
+		"oAP": "\/models\/19-alola.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/19-shiny.gif": {
+		"ft": 4194304,
+		"iS": 47713,
+		"oA": 0,
+		"oAP": "\/models\/19-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/19.gif": {
+		"ft": 4194304,
+		"iS": 47564,
+		"oA": 0,
+		"oAP": "\/models\/19.gif",
+		"oF": 0,
+		"opt": 1
+		},
 	"\/models\/2-attack.gif": {
 		"ft": 4194304,
-		"iS": 281813,
+		"iS": 139872,
 		"oA": 0,
 		"oAP": "\/models\/2-attack.gif",
 		"oF": 0,
-		"opt": 1
+		"opt": 0
 		},
 	"\/models\/2-shiny.gif": {
 		"ft": 4194304,
@@ -670,13 +1873,261 @@
 		"oA": 0,
 		"oAP": "\/models\/2-shiny.gif",
 		"oF": 0,
-		"opt": 0
+		"opt": 1
 		},
 	"\/models\/2.gif": {
 		"ft": 4194304,
 		"iS": 141422,
 		"oA": 0,
 		"oAP": "\/models\/2.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/20-alola-shiny.gif": {
+		"ft": 4194304,
+		"iS": 245672,
+		"oA": 0,
+		"oAP": "\/models\/20-alola-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/20-alola.gif": {
+		"ft": 4194304,
+		"iS": 138723,
+		"oA": 0,
+		"oAP": "\/models\/20-alola.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/20-shiny.gif": {
+		"ft": 4194304,
+		"iS": 160699,
+		"oA": 0,
+		"oAP": "\/models\/20-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/20.gif": {
+		"ft": 4194304,
+		"iS": 161777,
+		"oA": 0,
+		"oAP": "\/models\/20.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/21-shiny.gif": {
+		"ft": 4194304,
+		"iS": 42132,
+		"oA": 0,
+		"oAP": "\/models\/21-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/21.gif": {
+		"ft": 4194304,
+		"iS": 43367,
+		"oA": 0,
+		"oAP": "\/models\/21.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/22-shiny.gif": {
+		"ft": 4194304,
+		"iS": 185838,
+		"oA": 0,
+		"oAP": "\/models\/22-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/22.gif": {
+		"ft": 4194304,
+		"iS": 186928,
+		"oA": 0,
+		"oAP": "\/models\/22.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/23-shiny.gif": {
+		"ft": 4194304,
+		"iS": 80442,
+		"oA": 0,
+		"oAP": "\/models\/23-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/23.gif": {
+		"ft": 4194304,
+		"iS": 81255,
+		"oA": 0,
+		"oAP": "\/models\/23.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/24-shiny.gif": {
+		"ft": 4194304,
+		"iS": 237692,
+		"oA": 0,
+		"oAP": "\/models\/24-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/24.gif": {
+		"ft": 4194304,
+		"iS": 239529,
+		"oA": 0,
+		"oAP": "\/models\/24.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/25-attack.gif": {
+		"ft": 4194304,
+		"iS": 113772,
+		"oA": 0,
+		"oAP": "\/models\/25-attack.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/25-hat.gif": {
+		"ft": 4194304,
+		"iS": 74463,
+		"oA": 0,
+		"oAP": "\/models\/25-hat.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/25-shiny.gif": {
+		"ft": 4194304,
+		"iS": 69734,
+		"oA": 0,
+		"oAP": "\/models\/25-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/25.gif": {
+		"ft": 4194304,
+		"iS": 74070,
+		"oA": 0,
+		"oAP": "\/models\/25.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/26-alola-shiny.gif": {
+		"ft": 4194304,
+		"iS": 237273,
+		"oA": 0,
+		"oAP": "\/models\/26-alola-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/26-alola.gif": {
+		"ft": 4194304,
+		"iS": 244428,
+		"oA": 0,
+		"oAP": "\/models\/26-alola.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/26-attack.gif": {
+		"ft": 4194304,
+		"iS": 228324,
+		"oA": 0,
+		"oAP": "\/models\/26-attack.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/26-shiny.gif": {
+		"ft": 4194304,
+		"iS": 86056,
+		"oA": 0,
+		"oAP": "\/models\/26-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/26.gif": {
+		"ft": 4194304,
+		"iS": 86079,
+		"oA": 0,
+		"oAP": "\/models\/26.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/27-alola-shiny.gif": {
+		"ft": 4194304,
+		"iS": 73710,
+		"oA": 0,
+		"oAP": "\/models\/27-alola-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/27-alola.gif": {
+		"ft": 4194304,
+		"iS": 75562,
+		"oA": 0,
+		"oAP": "\/models\/27-alola.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/27-shiny.gif": {
+		"ft": 4194304,
+		"iS": 60746,
+		"oA": 0,
+		"oAP": "\/models\/27-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/27.gif": {
+		"ft": 4194304,
+		"iS": 62264,
+		"oA": 0,
+		"oAP": "\/models\/27.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/28-alola-shiny.gif": {
+		"ft": 4194304,
+		"iS": 83467,
+		"oA": 0,
+		"oAP": "\/models\/28-alola-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/28-alola.gif": {
+		"ft": 4194304,
+		"iS": 83814,
+		"oA": 0,
+		"oAP": "\/models\/28-alola.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/28-shiny.gif": {
+		"ft": 4194304,
+		"iS": 141440,
+		"oA": 0,
+		"oAP": "\/models\/28-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/28.gif": {
+		"ft": 4194304,
+		"iS": 146837,
+		"oA": 0,
+		"oAP": "\/models\/28.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/29-shiny.gif": {
+		"ft": 4194304,
+		"iS": 113448,
+		"oA": 0,
+		"oAP": "\/models\/29-shiny.gif",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/models\/29.gif": {
+		"ft": 4194304,
+		"iS": 114916,
+		"oA": 0,
+		"oAP": "\/models\/29.gif",
 		"oF": 0,
 		"opt": 0
 		},
@@ -686,7 +2137,7 @@
 		"oA": 0,
 		"oAP": "\/models\/3-mega-shiny.gif",
 		"oF": 0,
-		"opt": 0
+		"opt": 1
 		},
 	"\/models\/3-mega.gif": {
 		"ft": 4194304,
@@ -702,7 +2153,7 @@
 		"oA": 0,
 		"oAP": "\/models\/3-shiny.gif",
 		"oF": 0,
-		"opt": 0
+		"opt": 1
 		},
 	"\/models\/3.gif": {
 		"ft": 4194304,
@@ -710,7 +2161,215 @@
 		"oA": 0,
 		"oAP": "\/models\/3.gif",
 		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/30-shiny.gif": {
+		"ft": 4194304,
+		"iS": 84540,
+		"oA": 0,
+		"oAP": "\/models\/30-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/30.gif": {
+		"ft": 4194304,
+		"iS": 87473,
+		"oA": 0,
+		"oAP": "\/models\/30.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/31-shiny.gif": {
+		"ft": 4194304,
+		"iS": 185266,
+		"oA": 0,
+		"oAP": "\/models\/31-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/31.gif": {
+		"ft": 4194304,
+		"iS": 189979,
+		"oA": 0,
+		"oAP": "\/models\/31.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/32-shiny.gif": {
+		"ft": 4194304,
+		"iS": 100446,
+		"oA": 0,
+		"oAP": "\/models\/32-shiny.gif",
+		"oF": 0,
 		"opt": 0
+		},
+	"\/models\/32.gif": {
+		"ft": 4194304,
+		"iS": 105562,
+		"oA": 0,
+		"oAP": "\/models\/32.gif",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/models\/33-shiny.gif": {
+		"ft": 4194304,
+		"iS": 127542,
+		"oA": 0,
+		"oAP": "\/models\/33-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/33.gif": {
+		"ft": 4194304,
+		"iS": 130368,
+		"oA": 0,
+		"oAP": "\/models\/33.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/34-shiny.gif": {
+		"ft": 4194304,
+		"iS": 181861,
+		"oA": 0,
+		"oAP": "\/models\/34-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/34.gif": {
+		"ft": 4194304,
+		"iS": 188872,
+		"oA": 0,
+		"oAP": "\/models\/34.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/35-shiny.gif": {
+		"ft": 4194304,
+		"iS": 76102,
+		"oA": 0,
+		"oAP": "\/models\/35-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/35.gif": {
+		"ft": 4194304,
+		"iS": 76009,
+		"oA": 0,
+		"oAP": "\/models\/35.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/36-shiny.gif": {
+		"ft": 4194304,
+		"iS": 100882,
+		"oA": 0,
+		"oAP": "\/models\/36-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/36.gif": {
+		"ft": 4194304,
+		"iS": 104988,
+		"oA": 0,
+		"oAP": "\/models\/36.gif",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/models\/37-alola-shiny.gif": {
+		"ft": 4194304,
+		"iS": 67953,
+		"oA": 0,
+		"oAP": "\/models\/37-alola-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/37-alola.gif": {
+		"ft": 4194304,
+		"iS": 67887,
+		"oA": 0,
+		"oAP": "\/models\/37-alola.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/37-shiny.gif": {
+		"ft": 4194304,
+		"iS": 83436,
+		"oA": 0,
+		"oAP": "\/models\/37-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/37.gif": {
+		"ft": 4194304,
+		"iS": 85511,
+		"oA": 0,
+		"oAP": "\/models\/37.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/38-alola-shiny.gif": {
+		"ft": 4194304,
+		"iS": 197381,
+		"oA": 0,
+		"oAP": "\/models\/38-alola-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/38-alola.gif": {
+		"ft": 4194304,
+		"iS": 183707,
+		"oA": 0,
+		"oAP": "\/models\/38-alola.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/38-attack.gif": {
+		"ft": 4194304,
+		"iS": 414035,
+		"oA": 0,
+		"oAP": "\/models\/38-attack.gif",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/models\/38-shiny.gif": {
+		"ft": 4194304,
+		"iS": 240899,
+		"oA": 0,
+		"oAP": "\/models\/38-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/38.gif": {
+		"ft": 4194304,
+		"iS": 241777,
+		"oA": 0,
+		"oAP": "\/models\/38.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/39-attack.gif": {
+		"ft": 4194304,
+		"iS": 177679,
+		"oA": 0,
+		"oAP": "\/models\/39-attack.gif",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/models\/39-shiny.gif": {
+		"ft": 4194304,
+		"iS": 97695,
+		"oA": 0,
+		"oAP": "\/models\/39-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/39.gif": {
+		"ft": 4194304,
+		"iS": 98563,
+		"oA": 0,
+		"oAP": "\/models\/39.gif",
+		"oF": 0,
+		"opt": 1
 		},
 	"\/models\/4-attack.gif": {
 		"ft": 4194304,
@@ -734,6 +2393,182 @@
 		"oA": 0,
 		"oAP": "\/models\/4.gif",
 		"oF": 0,
+		"opt": 0
+		},
+	"\/models\/40-shiny.gif": {
+		"ft": 4194304,
+		"iS": 155465,
+		"oA": 0,
+		"oAP": "\/models\/40-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/40.gif": {
+		"ft": 4194304,
+		"iS": 157514,
+		"oA": 0,
+		"oAP": "\/models\/40.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/41-attack.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/41-attack.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/41-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/41-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/41.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/41.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/42-attack.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/42-attack.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/42-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/42-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/42.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/42.gif",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/models\/43-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/43-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/43.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/43.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/44-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/44-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/44.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/44.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/45-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/45-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/45.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/45.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/46-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/46-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/46.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/46.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/47-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/47-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/47.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/47.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/48-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/48-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/48.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/48.gif",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/models\/49-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/49-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/49.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/49.gif",
+		"oF": 0,
 		"opt": 1
 		},
 	"\/models\/5-attack.gif": {
@@ -742,7 +2577,7 @@
 		"oA": 0,
 		"oAP": "\/models\/5-attack.gif",
 		"oF": 0,
-		"opt": 0
+		"opt": 1
 		},
 	"\/models\/5-shiny.gif": {
 		"ft": 4194304,
@@ -760,13 +2595,245 @@
 		"oF": 0,
 		"opt": 1
 		},
+	"\/models\/50-alola-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/50-alola-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/50-alola.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/50-alola.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/50-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/50-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/50.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/50.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/51-alola-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/51-alola-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/51-alola.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/51-alola.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/51-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/51-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/51.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/51.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/52-alola-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/52-alola-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/52-alola.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/52-alola.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/52-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/52-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/52.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/52.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/53-alola-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/53-alola-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/53-alola.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/53-alola.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/53-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/53-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/53.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/53.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/54-attack.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/54-attack.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/54-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/54-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/54.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/54.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/55-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/55-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/55.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/55.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/56-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/56-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/56.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/56.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/57-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/57-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/57.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/57.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/58-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/58-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/58.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/58.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/59-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/59-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/59.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/59.gif",
+		"oF": 0,
+		"opt": 1
+		},
 	"\/models\/6-attack.gif": {
 		"ft": 4194304,
-		"iS": 329768,
+		"iS": 158917,
 		"oA": 0,
 		"oAP": "\/models\/6-attack.gif",
 		"oF": 0,
-		"opt": 1
+		"opt": 0
 		},
 	"\/models\/6-megax-shiny.gif": {
 		"ft": 4194304,
@@ -816,6 +2883,206 @@
 		"oF": 0,
 		"opt": 1
 		},
+	"\/models\/60-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/60-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/60.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/60.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/61-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/61-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/61.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/61.gif",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/models\/62-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/62-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/62.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/62.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/63-attack.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/63-attack.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/63-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/63-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/63.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/63.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/64-attack.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/64-attack.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/64-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/64-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/64.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/64.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/65-attack.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/65-attack.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/65-mega-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/65-mega-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/65-mega.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/65-mega.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/65-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/65-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/65.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/65.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/66-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/66-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/66.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/66.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/67-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/67-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/67.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/67.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/68-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/68-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/68.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/68.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/69-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/69-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/69.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/69.gif",
+		"oF": 0,
+		"opt": 1
+		},
 	"\/models\/7-attack.gif": {
 		"ft": 4194304,
 		"iS": 137818,
@@ -837,6 +3104,222 @@
 		"iS": 61367,
 		"oA": 0,
 		"oAP": "\/models\/7.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/70-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/70-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/70.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/70.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/71-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/71-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/71.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/71.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/72-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/72-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/72.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/72.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/73-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/73-shiny.gif",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/models\/73.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/73.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/74-alola-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/74-alola-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/74-alola.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/74-alola.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/74-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/74-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/74.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/74.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/75-alola-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/75-alola-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/75-alola.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/75-alola.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/75-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/75-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/75.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/75.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/76-alola-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/76-alola-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/76-alola.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/76-alola.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/76-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/76-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/76.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/76.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/77-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/77-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/77.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/77.gif",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/models\/78-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/78-shiny.gif",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/models\/78.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/78.gif",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/models\/79-attack.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/79-attack.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/79-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/79-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/79.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/79.gif",
 		"oF": 0,
 		"opt": 1
 		},
@@ -864,13 +3347,245 @@
 		"oF": 0,
 		"opt": 1
 		},
+	"\/models\/80-attack.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/80-attack.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/80-mega-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/80-mega-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/80-mega.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/80-mega.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/80-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/80-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/80.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/80.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/81-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/81-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/81.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/81.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/82-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/82-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/82.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/82.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/83-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/83-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/83.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/83.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/84-attack.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/84-attack.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/84-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/84-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/84.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/84.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/85-attack.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/85-attack.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/85-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/85-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/85.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/85.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/86-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/86-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/86.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/86.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/87-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/87-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/87.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/87.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/88-alola-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/88-alola-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/88-alola.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/88-alola.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/88-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/88-shiny.gif",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/models\/88.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/88.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/89-alola-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/89-alola-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/89-alola.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/89-alola.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/89-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/89-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/89.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/89.gif",
+		"oF": 0,
+		"opt": 1
+		},
 	"\/models\/9-attack.gif": {
 		"ft": 4194304,
 		"iS": 358475,
 		"oA": 0,
 		"oAP": "\/models\/9-attack.gif",
 		"oF": 0,
-		"opt": 0
+		"opt": 1
 		},
 	"\/models\/9-mega-shiny.gif": {
 		"ft": 4194304,
@@ -878,7 +3593,7 @@
 		"oA": 0,
 		"oAP": "\/models\/9-mega-shiny.gif",
 		"oF": 0,
-		"opt": 0
+		"opt": 1
 		},
 	"\/models\/9-mega.gif": {
 		"ft": 4194304,
@@ -904,10 +3619,282 @@
 		"oF": 0,
 		"opt": 1
 		},
+	"\/models\/90-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/90-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/90.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/90.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/91-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/91-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/91.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/91.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/92-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/92-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/92.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/92.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/93-attack.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/93-attack.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/93-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/93-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/93.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/93.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/94-attack.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/94-attack.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/94-mega-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/94-mega-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/94-mega.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/94-mega.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/94-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/94-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/94.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/94.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/95-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/95-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/95.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/95.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/96-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/96-shiny.gif",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/models\/96.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/96.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/97-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/97-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/97.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/97.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/98-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/98-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/98.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/98.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/99-shiny.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/99-shiny.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/models\/99.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/models\/99.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/node_modules": {
+		"ft": 65536,
+		"oA": 2,
+		"oAP": "\/build\/node_modules",
+		"oF": 0
+		},
+	"\/package.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/package-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
 	"\/Procfile": {
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/Procfile",
+		"oF": 0
+		},
+	"\/views\/build_dbs\/index.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/views\/build_dbs\/index.php",
+		"oF": 0
+		},
+	"\/views\/build_dbs\/info.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/views\/build_dbs\/info.php",
+		"oF": 0
+		},
+	"\/views\/build_dbs\/tables\/data\/pokemon_names.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/views\/build_dbs\/tables\/data\/pokemon_names-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/views\/build_dbs\/tables\/data\/pokemon_species.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/views\/build_dbs\/tables\/data\/pokemon_species-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/views\/build_dbs\/tables\/data\/pokemon_types.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/views\/build_dbs\/tables\/data\/pokemon_types-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/views\/build_dbs\/tables\/names_table.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/views\/build_dbs\/tables\/names_table.php",
+		"oF": 0
+		},
+	"\/views\/build_dbs\/tables\/species_table.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/views\/build_dbs\/tables\/species_table.php",
+		"oF": 0
+		},
+	"\/views\/build_dbs\/tables\/types_table.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/views\/build_dbs\/tables\/types_table.php",
+		"oF": 0
+		},
+	"\/views\/index.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/views\/index.php",
+		"oF": 0
+		},
+	"\/views\/pokefinder.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/views\/pokefinder.php",
 		"oF": 0
 		}
 	},

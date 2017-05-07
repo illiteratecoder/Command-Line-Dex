@@ -1,0 +1,31 @@
+{
+  "name": "commandline-dex",
+  "version": "0.0.1",
+  "description": "A Pokedex Project",
+  "engines": {
+    "node": "5.9.1"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.13.3",
+    "php-express": "0.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express",
+    "php"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "devDependencies": {},
+  "author": "Jeremy Barenholtz"
+}

@@ -66,35 +66,13 @@ function setupTypewriter(t) {
         }
         else {
             document.querySelector( '[name="command"]' ).removeAttribute('disabled');
+            document.querySelector( '[name="command"]' ).focus();
         }
 
     };
     
     return {type: type}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

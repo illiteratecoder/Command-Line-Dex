@@ -1,39 +1,125 @@
-/* Dex command controller */
+/* Handles input commands for the Dex */
 
 "use strict";
 
 // Creates an element for the typewriter effect
-function createTemplate( string ) {
-	let newTemplate = document.createElement("template");
-	newTemplate.innerHTML = string;
+function createTemplate( string, err=false ) {
 
-	return newTemplate.content.firstChild
-}
+	let start = '<pre data-target="copy" data-opt="append">',
+		end   = '\n</pre>',
+		middle;
 
-// Creates an string for output from a command
-function createString( string, err=false) {
-	let start = '<pre data-target="copy" data-opt="append">';
-	let end = '\n</pre>';
-	let middle;
-	if (err) {
+	if ( err === 404 ) {
+		middle = '<span class="err-highlight">404: \'' + string + '\' was not found </span>';
+	}
+	else if ( err ) {
 		middle = '<span class="err-highlight">Uncaught TypeError: newPokemon.' + string + '() is not a function</span>';
 	}
 	else {
         middle = 'newPokemon.<span class="var-highlight">' + string + '</span>();';
 	}
 
-	return start + middle + end
+	let element     = start + middle + end,
+		newTemplate = document.createElement( "template" );
+		
+	newTemplate.innerHTML = element;
+
+	return newTemplate.content.firstChild
 }
 
 
-let $n = null;  // number of the current Pokemon
+// Sets up the typewriter and starts the type animation
+function fixTypewriter( content ){
 
-// Bind functions to the input command line and run when value changes
+	let typewriter = setupTypewriter( content );
+	typewriter.type();
+
+	return false
+}
+
+let n = null;  // number of the current Pokemon displayed
+
+// Run when command line input value changes (hits return or clicks off)
 document.querySelector( '[name="command"]' ).addEventListener( 'change', function() {
 	
-	this.setAttribute( "disabled", true );
-	let $command = this.value;  // the input
-	let $model   = document.getElementById('model')  // the animated model element
+	this.setAttribute( "disabled", true ); 			 // disable input until type animation is finished
+	let command = this.value,  						 // the input
+		$model  = document.getElementById( 'model' );  // the animated model element
+
+	// Outputs appropriate img src for command based on what image is currently displayed
+	function cmdCtrl( cmd ) {
+
+		// Regex to get suffixs of mega, alola, and shiny
+		// >> http://site.com/models/9-mega-shiny.gif
+		// >> [models/3-mega-shiny.gif, mega, shiny]
+		let re     = /(?:models\/)(?:\d{1,3})(?:\-{1}(mega|alola|attack|hat))?(?:\-{1}(shiny))?(?:\.gif)/,
+			regExp = re.exec($model.src),
+			src    = "models/" + n;
+
+		if ( cmd === 'mega' || cmd === 'alola' || cmd === 'attack' || cmd === 'hat' ) {
+			if ( regExp[1] === undefined || regExp[1] !== cmd ) {
+				src += "-" + cmd;
+
+				if ( cmd === 'mega' || cmd === 'alola' ) {
+					if ( regExp[2] !== undefined ) {
+						src += "-" + regExp[2];  // if pokemon is already shiny, keep it shiny
+					}
+				}
+			}
+			else if ( regExp[1] === cmd ) {
+				if ( regExp[2] !== undefined ){
+					src += "-" + regExp[2];  // if pokemon is already shiny, keep it shiny
+				}
+			}
+		}
+		else if ( cmd === 'shiny' ) {
+			if ( regExp[1] === undefined ) {
+				if ( regExp[2] === undefined ){
+					src += "-" + cmd;
+				}
+			}
+			else if ( regExp[1] === 'attack' || regExp[1] === 'hat' ) {
+				src += "-" + cmd;
+			}
+			else if ( regExp[1] === 'mega' || regExp[1] === 'alola' ) {
+				src += "-" + regExp[1];  // if pokemon is already mega or alolan, keep it that way
+
+				if ( regExp[2] === undefined ) {
+					src += "-" + cmd;
+				}
+			}
+		}
+
+		src += ".gif";
+
+		if ( cmd !== 'relax' ) {
+			let xhttp = new XMLHttpRequest();
+
+			// Check if image file exists
+			xhttp.onreadystatechange = function() {
+				if ( this.readyState === 4 && this.status === 200 ) {
+					$model.src = src;
+
+					let content = createTemplate( cmd );
+					fixTypewriter( content );		
+				}
+				else if ( this.readyState === 4 && this.status !== 200 ) {
+					let content = createTemplate( cmd, true );
+					fixTypewriter( content );
+				}
+			};
+
+			xhttp.open( 'GET', src, true );
+			xhttp.send();
+		}
+		else {
+			$model.src = src;
+
+			let content = createTemplate( cmd );
+			fixTypewriter( content );	
+		}
+		return false
+	}
 
 	// Prevent function from running again after value is reset
 	if ( this.value === '' ) {
@@ -45,132 +131,100 @@ document.querySelector( '[name="command"]' ).addEventListener( 'change', functio
 	this.blur();
 
 	// Attack command
-	if ( $command === 'attack' ) {
-		let $src = "models/" + $n + "-attack" + ".gif";
-		let xhttp = new XMLHttpRequest();
-		xhttp.onreadystatechange = function () {
-			if ( this.readyState === 4 && this.status === 200 ) {
-				$model.src = $src;
-
-        		let content = createString('attack');
-				content = createTemplate(content);
-				let typewriter = setupTypewriter(content);
-				typewriter.type();		
-			}
-			else if ( this.readyState === 4 && this.status !== 200) {
-				let content = createString('attack', true);
-				content = createTemplate(content);
-				let typewriter = setupTypewriter(content);
-				typewriter.type();
-			}
-		};
-
-		xhttp.open('GET', $src, true);
-		xhttp.send();
-
-		return false
-	}
-
-	// Relax command
-	else if ( $command === 'relax' ) {
-		$model.src = "models/" + $n + ".gif";
-
-		let content = createString('relax');
-		content = createTemplate(content);
-		let typewriter = setupTypewriter(content);
-		typewriter.type();
-
-		return false
-	}
+		if ( command === 'attack' ) {
+			cmdCtrl( 'attack' );
+		}
 
 	// Shiny command
-	else if ( $command === 'shiny' ) {
-		let $src = "models/" + $n + "-shiny" + ".gif";
-		let xhttp = new XMLHttpRequest();
-		xhttp.onreadystatechange = function () {
-			if ( this.readyState === 4 && this.status === 200 ) {
-				$model.src = $src;
-
-				let content = createString('shiny');
-				content = createTemplate(content);
-				let typewriter = setupTypewriter(content);
-				typewriter.type();		
-			}
-			else if ( this.readyState === 4 && this.status !== 200) {
-				let content = createString('shiny', true);
-				content = createTemplate(content);
-				let typewriter = setupTypewriter(content);
-				typewriter.type();
-			}
-		};
-
-		xhttp.open('GET', $src, true);
-		xhttp.send();
-
-		return false
-	}
+		else if ( command === 'shiny' ) {
+			cmdCtrl( 'shiny' );
+		}
 
 	// Mega command
-	else if ( $command === 'mega' ) {
-		let $src = "models/" + $n + "-mega" + ".gif";
-		let xhttp = new XMLHttpRequest();
-		xhttp.onreadystatechange = function () {
-			if ( this.readyState === 4 && this.status === 200 ) {
-				$model.src = $src;
-
-				let content = createString('mega');
-				content = createTemplate(content);
-				let typewriter = setupTypewriter(content);
-				typewriter.type();		
-			}
-			else if ( this.readyState === 4 && this.status !== 200) {
-				let content = createString('mega', true);
-				content = createTemplate(content);
-				let typewriter = setupTypewriter(content);
-				typewriter.type();
-			}
-		};
-
-		xhttp.open('GET', $src, true);
-		xhttp.send();
-
-		return false
-	}
-
-	let xhttp = new XMLHttpRequest();
-	xhttp.onreadystatechange = function () {
-		if (this.readyState === 4 && this.status === 200) {
-			let $resp = JSON.parse(this.responseText);
-			$n = $resp.id;
-
-			if ( !$resp.type2 ) {
-				$resp.type2 = "null";
-				document.getElementById('poketype2').className = "int-highlight";
-			}
-			else {
-				$resp.type2 = "'" + $resp.type2 + "'";
-				document.getElementById('poketype2').className = "string-highlight";
-
-			}
-
-			document.getElementById('model').src = "models/" + $resp.id + ".gif";
-			document.getElementById('name').innerHTML = $resp.name;
-			document.getElementById('number').innerHTML = '#' + $resp.id;
-			document.getElementById('pokename').innerHTML = "'" + $resp.name + "'";
-			document.getElementById('pokenum').innerHTML = $resp.id;
-			document.getElementById('poketype1').innerHTML = "'" + $resp.type1 + "'";
-			document.getElementById('poketype2').innerHTML = $resp.type2;
-			document.getElementById('pokespecies').innerHTML = "'" + $resp.species + "'";
-
-			let typewriter = document.getElementById('typewriter');
-		    typewriter = setupTypewriter(typewriter);
-		    typewriter.type();
+		else if ( command === 'mega' ) {
+			cmdCtrl( 'mega' );
 		}
-	};
-	xhttp.open('GET', 'backend/pokefinder.php?name=' + $command, true);
-	xhttp.send();
-});
 
+	// Alola command
+		else if ( command === 'alola' ) {
+			cmdCtrl( 'alola' );
+		}
+
+	// Hat command (for pikachu)
+		else if (command === 'hat') {
+			cmdCtrl( 'hat' );
+		}
+
+	// Relax command
+		else if ( command === 'relax' ) {
+			cmdCtrl( 'relax' );
+		}
+
+	// Pokemon command
+		else {
+			let xhttp = new XMLHttpRequest();
+
+			xhttp.onreadystatechange = function() {
+				if ( this.readyState === 4 && this.status === 200 ) {
+					let res = JSON.parse(this.responseText);
+
+					if ( res === null ) {
+						let content = createTemplate(command, 404);
+						fixTypewriter(content);
+
+						return false
+					}
+					else if ( res.id === n ){
+						document.querySelector( '[name="command"]' ).removeAttribute('disabled'); 
+						document.querySelector( '[name="command"]' ).focus();
+						return false
+					}
+
+					$model.src = "images/ball-shake.gif";  // image before pokemon is displayed
+					n = res.id;
+
+					if ( !res.type2 ) {
+						res.type2 = "null";
+						document.getElementById('poketype2').className = "int-highlight";
+					}
+					else {
+						res.type2 = "'" + res.type2 + "'";
+						document.getElementById('poketype2').className = "string-highlight";
+					}
+
+					$model.classList.remove("grow");
+
+					setTimeout(function(){
+						$model.onload = function() {
+							if ($model.src.substr($model.src.length - 14) !== 'ball-shake.gif'){
+								if ( command !== 'mega' || command !== 'attack' || command !== 'alola' || command !== 'shiny' || command !== 'hat' || command !== 'relax' ){
+									$model.classList.add("grow"); 
+								}
+							}
+						}
+						$model.src = "models/" + res.id + ".gif";
+						// $model.classList.add("grow");
+					}, 1600);
+
+					document.getElementById( 'name'        ).innerHTML = res.name;
+					document.getElementById( 'number'      ).innerHTML = '#' + res.id;
+					document.getElementById( 'pokename'    ).innerHTML = "'" + res.name + "'";
+					document.getElementById( 'pokenum'     ).innerHTML = res.id;
+					document.getElementById( 'poketype1'   ).innerHTML = "'" + res.type1 + "'";
+					document.getElementById( 'poketype2'   ).innerHTML = res.type2;
+					document.getElementById( 'pokespecies' ).innerHTML = "'" + res.species + "'";
+
+					let typewriter = document.getElementById('typewriter');
+				    fixTypewriter(typewriter);
+				}
+			};
+
+			xhttp.open( 'GET', 'pokefinder.php?name=' + command, true );
+			xhttp.send();
+		}
+
+	return false
+});
 
 
 

@@ -22,8 +22,12 @@ function preloadImages( array ) {
 
 let $imgArray = [];
 
-for ( let i = 1; i < 16; i++ ) {
-	$imgArray.push("models/" + i + ".gif");
-}
+// for ( let i = 1; i < 151; i++ ) {
+// 	$imgArray.push("models/" + i + ".gif");
+// }
+$imgArray.push("images/ball-shake.gif");
 
 preloadImages($imgArray);
+
+
+

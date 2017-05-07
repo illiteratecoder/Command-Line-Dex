@@ -12,10 +12,24 @@
 				bottom: 5px;
 				right: 0;
 				left: 0;
+				@include vendor('transform-origin', 'center bottom')
+
+				&.grow {
+					animation: grow 300ms ease-in 1;
+				}
+
 			}
+
+			@include keyframes('grow') {
+				0%{ @include vendor('transform', 'scale(0)')}
+				100%{ @include vendor('transform', 'scale(1)')}
+			};
+
+
 		}
 
 	}
+
 
 	.var-highlight{
     	color: #02e2f7;
