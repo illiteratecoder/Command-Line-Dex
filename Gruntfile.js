@@ -73,12 +73,16 @@ module.exports = function(grunt) {
         files: [
           // copy minified JS files
           { expand: true, src: 'assets/js/*.min.js', dest: 'build/' },
+          // copy minified CSS files
+          { expand: true, src: 'assets/css/*.min.css', dest: 'build/' },
           // copy font files
           { expand: true, src: 'assets/fonts/*', dest: 'build/' },
           // copy images
           { expand: true, src: 'images/**/*', dest: 'build/' },
-          // copy views
-          { expand: true, src: '*', dest: 'build/', filter: 'isFile'}
+          // copy php
+          { expand: true, src: 'php/**/*', dest: 'build/' },
+          // copy files
+          { expand: true, src: ['*'], dest: 'build/', filter: 'isFile'}
 
         ]
       }

@@ -17,14 +17,15 @@ app.use(bodyParser.json());
 app.set('port', (process.env.PORT || 5000));
 
 // Set public folders.
-app.use('/assets', express.static(path.join(__dirname, 'dist/assets')));
-app.use('/models', express.static(path.join(__dirname, 'dist/images/models')));
-app.use('/images', express.static(path.join(__dirname, 'dist/images')));
+console.log(__dirname);
+app.use('/assets', express.static(path.join(__dirname, '/assets')));
+app.use('/models', express.static(path.join(__dirname, '/images/models')));
+app.use('/images', express.static(path.join(__dirname, '/images')));
 
 // views is directory for all template files
-// app.set('views', path.join(__dirname, '/views'));
-// app.engine('php', phpExpress.engine);
-// app.set('view engine', 'php');
+app.set('views', path.join(__dirname, '/php'));
+app.engine('php', phpExpress.engine);
+app.set('view engine', 'php');
 
 // routing all .php file to php-express
 app.all(/.+\.php$/, phpExpress.router);
@@ -60,25 +61,3 @@ app.use(function (req, res, next) {
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
