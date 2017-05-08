@@ -1,5 +1,6 @@
 module.exports = function(grunt) {
 
+  require('load-grunt-tasks')(grunt); // npm install --save-dev load-grunt-tasks 
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -9,8 +10,19 @@ module.exports = function(grunt) {
       },
       build: {
         src: 'assets/js/*.js',
-        dest: 'build/<%= pkg.name %>.min.js'
+        dest: 'build/*.min.js'
       }
+    },
+    babel: {
+        options: {
+            sourceMap: false,
+            presets: ['es2015']
+        },
+        dist: {
+            files: {
+                'build/app.js': 'assets/js/command_line.js'
+            }
+        }
     }
   });
 
@@ -18,8 +30,24 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
 
   // Default task(s).
-  grunt.registerTask('default', ['uglify']);
+  grunt.registerTask('default', ['babel', 'uglify']);
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
