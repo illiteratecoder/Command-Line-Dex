@@ -17,6 +17,7 @@
     "grunt": "1.0.1",
     "grunt-cli": "1.2.0",
     "grunt-contrib-uglify": "2.3.0",
+    "load-grunt-tasks": "^3.5.2",
     "php-express": "0.0.3"
   },
   "repository": {
