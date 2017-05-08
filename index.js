@@ -2,9 +2,16 @@ var path = require('path');
 var express = require('express');
 var app = express();
 var router = express.Router();
+
+// Change bath for php so it works on heroku and locally
+let phpPath = 'php';
+if (process.env.PWD === '/app') {
+	phpPath = '.heroku/php/bin/php'
+}
 var phpExpress = require('php-express')({
-	binPath: 'php'
+	binPath: phpPath
 });
+
 var bodyParser = require('body-parser');
 
 console.log(process.env);
@@ -56,6 +63,8 @@ app.use(function (req, res, next) {
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
+
+
 
 
 
