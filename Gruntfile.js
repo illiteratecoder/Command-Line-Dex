@@ -1,5 +1,5 @@
 module.exports = function(grunt) {
-
+  var es2015 = require('babel-preset-es2015')
   require('load-grunt-tasks')(grunt); // npm install --save-dev load-grunt-tasks 
   // Project configuration.
   grunt.initConfig({
@@ -7,7 +7,7 @@ module.exports = function(grunt) {
     babel: {
         options: {
             sourceMap: false,
-            presets: ['es2015']
+            presets: ["es3932"]
         },
         dist: {
             files: {
@@ -32,6 +32,10 @@ module.exports = function(grunt) {
   // Default task(s).
   grunt.registerTask('default', ['babel', 'uglify']);
 };
+
+
+
+
 
 
 
