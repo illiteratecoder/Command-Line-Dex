@@ -20,7 +20,7 @@ module.exports = function(grunt) {
         },
         dist: {
             files: {
-                'build/app.js': 'assets/js/command_line.js'
+                'build/*.js': 'build/*.min.js'
             }
         }
     }
@@ -32,6 +32,8 @@ module.exports = function(grunt) {
   // Default task(s).
   grunt.registerTask('default', ['babel', 'uglify']);
 };
+
+
 
 
 
