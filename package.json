@@ -23,7 +23,7 @@
   },
   "scripts": {
     "start": "node index.js",
-    "postinstall": "grunt local"
+    "postinstall": "grunt heroku"
   },
   "dependencies": {
     "babel-preset-es2015": "^6.24.1",

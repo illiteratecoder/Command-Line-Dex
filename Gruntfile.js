@@ -66,4 +66,5 @@ module.exports = function(grunt) {
 
   // Default task(s).
   grunt.registerTask('local', ['eslint', 'concat', 'babel', 'uglify']);
+  grunt.registerTask('heroku', ['concat', 'babel', 'uglify']);
 };
