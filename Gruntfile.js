@@ -1,13 +1,12 @@
 module.exports = function(grunt) {
-  var es2015 = require('babel-preset-es2015')
-  require('load-grunt-tasks')(grunt); // npm install --save-dev load-grunt-tasks 
+
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     babel: {
         options: {
             sourceMap: false,
-            presets: ["es3932"]
+            presets: ["es2015"]
         },
         dist: {
             files: {
@@ -28,10 +27,15 @@ module.exports = function(grunt) {
 
   // Load the plugin that provides the "uglify" task.
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-babel')
 
   // Default task(s).
-  grunt.registerTask('default', ['babel', 'uglify']);
+  grunt.registerTask('heroku', ['babel', 'uglify']);
 };
+
+
+
+
 
 
 
