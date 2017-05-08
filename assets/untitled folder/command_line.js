@@ -1,4 +1,4 @@
-/* global setupTypewriter */
+/* Handles input commands for the Dex */
 
 "use strict";
 

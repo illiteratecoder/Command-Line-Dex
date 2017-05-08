@@ -6,6 +6,16 @@
     "node": "5.9.1"
   },
   "main": "index.js",
+  "eslintConfig": {
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "extends": "eslint:recommended",
+    "rules": {
+      "no-mixed-spaces-and-tabs": "off"
+    }
+  },
   "babel": {
     "presets": [
       "es2015"
@@ -16,16 +26,18 @@
     "postinstall": "grunt local"
   },
   "dependencies": {
-    "babel-preset-es2015": "6.24.1",
+    "babel-preset-es2015": "^6.24.1",
     "body-parser": "^1.15.2",
     "express": "^4.13.3",
-    "grunt": "1.0.1",
+    "grunt": "^1.0.1",
     "grunt-babel": "^6.0.0",
-    "grunt-cli": "1.2.0",
-    "grunt-contrib-concat": "1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-eslint": "0.0.5",
     "grunt-contrib-uglify": "2.3.0",
+    "grunt-contrib-watch": "^1.0.0",
     "load-grunt-tasks": "^3.5.2",
-    "php-express": "0.0.3"
+    "php-express": "^0.0.3"
   },
   "repository": {
     "type": "git",
@@ -39,6 +51,9 @@
   ],
   "license": "MIT",
   "homepage": "",
-  "devDependencies": {},
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "grunt-eslint": "^19.0.0"
+  },
   "author": "Jeremy Barenholtz"
 }

@@ -1,4 +1,4 @@
-/* globals skel */
+/* skel-baseline v3.0.1 | (c) n33 | skel.io | MIT licensed */
 
 (function() {
 

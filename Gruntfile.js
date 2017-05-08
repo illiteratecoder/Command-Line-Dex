@@ -2,13 +2,21 @@ module.exports = function(grunt) {
 
   // Project configuration.
   grunt.initConfig({
+    pkg: grunt.file.readJSON('package.json'),
+
     concat: {
-      main: {
-        files: {
-          'build/js/main.min.js': 'assets/js/*.js'
-        }
+      options: {
+        // define a string to put between each file in the concatenated output
+        separator: ';'
+      },
+      dist: {
+        // the files to concatenate
+        src: ['assets/js/*.js', '!assets/js/skel.min.js'],
+        // the location of the resulting JS file
+        dest: 'dist/<%= pkg.name %>.js'
       }
     },
+
     babel: {
         options: {
             sourceMap: false,
@@ -17,21 +25,34 @@ module.exports = function(grunt) {
         dist: {
             files: [{
                 expand: true,
-                cwd: 'build/js/',
-                src: 'main.min.js',
-                dest: 'build/js/',
-                ext: '.min.js'
+                src: 'dist/<%= pkg.name %>.js'
             }]
         }
     },
 
     uglify: {
-      files: {
-        src: 'build/js/main.min.js',
-        dest: 'build/js/',
+      options: {
+        banner: '/*! <% pkg.name %> <%= grunt.template.today("dd-mm-yyy") %> */\n'
+      },
+      dist: {
         expand: true,
         flatten: true,
-        ext: '.min.js'
+        files: {
+          'dist/<%= pkg.name %>.min.js': ['<%= concat.dist.dest %>'],
+        }
+      }
+    },
+
+    eslint: {
+      options: {
+        config: '<%= pkg.eslintConfig %>'
+      },
+      target: ['assets/js/*.js', '!assets/js/*.min.js']
+    },
+    watch: {
+      scripts: {
+        files: ['<%= eslint.target %>'],
+        tasks: ['eslint']
       }
     }
   });
@@ -40,86 +61,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-babel');
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks("grunt-eslint");
 
   // Default task(s).
-  grunt.registerTask('local', ['concat', 'babel', 'uglify']);
+  grunt.registerTask('local', ['eslint', 'concat', 'babel', 'uglify']);
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
