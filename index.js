@@ -4,9 +4,9 @@ var app = express();
 var router = express.Router();
 
 // Change bath for php so it works on heroku and locally
-let phpPath = 'php';
+var phpPath = 'php';
 if (process.env.PWD === '/app') {
-	phpPath = '.heroku/php/bin/php'
+	phpPath = '.heroku/php/bin/php';
 }
 var phpExpress = require('php-express')({
 	binPath: phpPath
@@ -63,6 +63,8 @@ app.use(function (req, res, next) {
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
+
+
 
 
 
