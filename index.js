@@ -3,7 +3,7 @@ var express = require('express');
 var app = express();
 var router = express.Router();
 
-// Change bath for php so it works on heroku and locally
+// Change path for php so it works on heroku and locally.
 var phpPath = 'php';
 if (process.env.PWD === '/app') {
 	phpPath = '.heroku/php/bin/php';
@@ -11,24 +11,20 @@ if (process.env.PWD === '/app') {
 var phpExpress = require('php-express')({
 	binPath: phpPath
 });
-
 var bodyParser = require('body-parser');
-
-console.log(process.env);
-
 app.use(bodyParser.json());
 
 app.set('port', (process.env.PORT || 5000));
 
-app.use('/assets', express.static(path.join(__dirname, '/assets')));
-app.use('/models', express.static(path.join(__dirname, '/models')));
-app.use('/images', express.static(path.join(__dirname, '/images')));
-app.use('/js', express.static(path.join(__dirname, '/build/js')));
+// Set public folders.
+app.use('/assets', express.static(path.join(__dirname, 'dist/assets')));
+app.use('/models', express.static(path.join(__dirname, 'dist/images/models')));
+app.use('/images', express.static(path.join(__dirname, 'dist/images')));
 
 // views is directory for all template files
-app.set('views', path.join(__dirname, '/views'));
-app.engine('php', phpExpress.engine);
-app.set('view engine', 'php');
+// app.set('views', path.join(__dirname, '/views'));
+// app.engine('php', phpExpress.engine);
+// app.set('view engine', 'php');
 
 // routing all .php file to php-express
 app.all(/.+\.php$/, phpExpress.router);

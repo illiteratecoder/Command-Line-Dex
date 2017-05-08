@@ -1,9 +1,22 @@
+/* eslint-env node */
+
 module.exports = function(grunt) {
 
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
+    eslint: {
+      options: {
+        config: '<%= pkg.eslintConfig %>',
+        format: 'codeframe'
+      },
+      all: {
+        src: ['Gruntfile.js', 'assets/js/*.js', '!assets/js/*.min.js']
+      }
+    },
+
+    // Concatenate JS files.
     concat: {
       options: {
         // define a string to put between each file in the concatenated output
@@ -11,60 +24,90 @@ module.exports = function(grunt) {
       },
       dist: {
         // the files to concatenate
-        src: ['assets/js/*.js', '!assets/js/skel.min.js'],
+        src: ['assets/js/*.js', '!assets/js/*.min.js'],
         // the location of the resulting JS file
-        dest: 'dist/<%= pkg.name %>.js'
+        dest: 'build/assets/js/<%= pkg.name %>.min.js'
       }
     },
 
+    // Transpile JS files for minification.
     babel: {
         options: {
             sourceMap: false,
             presets: ["es2015"]
         },
         dist: {
-            files: [{
-                expand: true,
-                src: 'dist/<%= pkg.name %>.js'
-            }]
+            files: {
+                '<%= concat.dist.dest %>': ['<%= concat.dist.dest %>']
+            }
         }
     },
 
+    // Minify JS files.
     uglify: {
       options: {
-        banner: '/*! <% pkg.name %> <%= grunt.template.today("dd-mm-yyy") %> */\n'
+        banner: '/*! <%= pkg.name %> <%= grunt.template.today("mm-dd-yyyy") %> */\n'
       },
       dist: {
-        expand: true,
-        flatten: true,
         files: {
-          'dist/<%= pkg.name %>.min.js': ['<%= concat.dist.dest %>'],
+          '<%= concat.dist.dest %>': ['<%= concat.dist.dest %>'],
         }
       }
     },
 
-    eslint: {
-      options: {
-        config: '<%= pkg.eslintConfig %>'
-      },
-      target: ['assets/js/*.js', '!assets/js/*.min.js']
+    // Compile and compress Sass files.
+    sass: {
+      dist: {
+        options: {
+          outputStyle: 'compressed'
+        },
+        files : {
+          'build/assets/css/main.min.css': 'assets/sass/main.scss'
+        }
+      }
     },
+
+    // Copy files over to build folder.
+    copy: {
+      dist: {
+        files: [
+          // copy minified JS files
+          { expand: true, src: 'assets/js/*.min.js', dest: 'build/' },
+          // copy font files
+          { expand: true, src: 'assets/fonts/*', dest: 'build/' },
+          // copy images
+          { expand: true, src: 'images/**/*', dest: 'build/' },
+          // copy views
+          { expand: true, src: '*', dest: 'build/', filter: 'isFile'}
+
+        ]
+      }
+    },
+
+    // Check syntax when file changes.
     watch: {
       scripts: {
-        files: ['<%= eslint.target %>'],
-        tasks: ['eslint']
+        files: ['Gruntfile.js', 'assets/js/*.js', '!assets/js/*.min.js'],
+        tasks: ['newer:eslint:all'],
+        options: {
+          spawn: false
+        }
+      },
+      css: {
+        files: ['assets/sass/**/*.scss'],
+        tasks: ['sass'],
+        options: {
+          spawn: false
+        }
       }
     }
+
   });
 
-  // Load the plugin that provides the "uglify" task.
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-babel');
-  grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks("grunt-eslint");
+  // Load the plugins.
+  require('load-grunt-tasks')(grunt);
 
   // Default task(s).
-  grunt.registerTask('local', ['eslint', 'concat', 'babel', 'uglify']);
-  grunt.registerTask('heroku', ['concat', 'babel', 'uglify']);
+  grunt.registerTask('local', ['eslint', 'concat', 'babel', 'uglify', 'sass', 'copy']);
+  grunt.registerTask('heroku', ['concat', 'babel', 'uglify', 'sass', 'copy']);
 };

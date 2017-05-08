@@ -1,6 +1,6 @@
-/* exported setupTypewriter, $status */
+/* exported a, setupTypewriter */
 
-function setupTypewriter(t) {
+const setupTypewriter = function(t) {
     'use strict';
     let location = t.getAttribute('data-target');
     location = document.getElementById(location);

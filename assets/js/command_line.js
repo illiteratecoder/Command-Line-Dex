@@ -2,8 +2,6 @@
 
 "use strict";
 
-
-
 // Creates an element for the typewriter effect
 function createTemplate( string, err=false ) {
 
