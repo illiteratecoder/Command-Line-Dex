@@ -495,6 +495,15 @@
 		"oO": 0,
 		"oS": 1
 		},
+	"\/Gruntfile.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "\/Gruntfile.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"\/images\/ball-shake.gif": {
 		"ft": 4194304,
 		"iS": 12077,
