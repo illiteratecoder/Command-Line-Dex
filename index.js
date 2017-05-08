@@ -23,6 +23,7 @@ app.set('port', (process.env.PORT || 5000));
 app.use('/assets', express.static(path.join(__dirname, '/assets')));
 app.use('/models', express.static(path.join(__dirname, '/models')));
 app.use('/images', express.static(path.join(__dirname, '/images')));
+app.use('/js', express.static(path.join(__dirname, '/build/js')));
 
 // views is directory for all template files
 app.set('views', path.join(__dirname, '/views'));
@@ -63,6 +64,8 @@ app.use(function (req, res, next) {
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
+
+
 
 
 

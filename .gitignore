@@ -1,4 +1,4 @@
 .env
 .config.codekit3
 node_modules
-build/*.js
+build/js/main.min.js

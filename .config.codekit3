@@ -90,21 +90,6 @@
 		"sC": 3,
 		"tS": 1
 		},
-	"\/assets\/js\/command_line.min.js": {
-		"ft": 64,
-		"mi": 0,
-		"oA": 0,
-		"oAP": "\/assets\/js\/command_line.min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"\/assets\/js\/command_line.min.js.map": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/assets\/js\/command_line.min.js.map",
-		"oF": 0
-		},
 	"\/assets\/js\/main.js": {
 		"ft": 64,
 		"mi": 0,
@@ -119,15 +104,6 @@
 		"mi": 0,
 		"oA": 0,
 		"oAP": "\/assets\/js\/preload_imgs.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"\/assets\/js\/skel.min.js": {
-		"ft": 64,
-		"mi": 0,
-		"oA": 0,
-		"oAP": "\/assets\/js\/skel.min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
@@ -486,6 +462,24 @@
 		"oA": 2,
 		"oAP": "\/backend\/pokefinder.php",
 		"oF": 0
+		},
+	"\/build\/js\/main.min.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "\/build\/js\/main.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"\/build\/js\/skel.min.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "\/build\/js\/skel.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
 		},
 	"\/composer.json": {
 		"ft": 524288,

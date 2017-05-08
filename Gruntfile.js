@@ -2,36 +2,96 @@ module.exports = function(grunt) {
 
   // Project configuration.
   grunt.initConfig({
-    pkg: grunt.file.readJSON('package.json'),
+    concat: {
+      main: {
+        files: {
+          'build/js/main.min.js': 'assets/js/*.js'
+        }
+      }
+    },
     babel: {
         options: {
             sourceMap: false,
             presets: ["es2015"]
         },
         dist: {
-            files: {
-                'build/*.js': 'assets/js/*.min.js'
-            }
+            files: [{
+                expand: true,
+                cwd: 'build/js/',
+                src: 'main.min.js',
+                dest: 'build/js/',
+                ext: '.min.js'
+            }]
         }
     },
+
     uglify: {
-      options: {
-        banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
-      },
-      build: {
-        src: 'build/*.js',
-        dest: 'build/*.min.js'
+      files: {
+        src: 'build/js/main.min.js',
+        dest: 'build/js/',
+        expand: true,
+        flatten: true,
+        ext: '.min.js'
       }
     }
   });
 
   // Load the plugin that provides the "uglify" task.
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-babel')
+  grunt.loadNpmTasks('grunt-babel');
+  grunt.loadNpmTasks('grunt-contrib-concat');
 
   // Default task(s).
-  grunt.registerTask('heroku', ['babel', 'uglify']);
+  grunt.registerTask('local', ['concat', 'babel', 'uglify']);
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
