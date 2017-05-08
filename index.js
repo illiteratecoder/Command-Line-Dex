@@ -3,7 +3,7 @@ var express = require('express');
 var app = express();
 var router = express.Router();
 var phpExpress = require('php-express')({
-	binPath: 'php'
+	binPath: '.heroku/php/bin/php'
 });
 var bodyParser = require('body-parser');
 
@@ -54,6 +54,8 @@ app.use(function (req, res, next) {
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
+
+
 
 
 
