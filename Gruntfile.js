@@ -4,15 +4,6 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    uglify: {
-      options: {
-        banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
-      },
-      build: {
-        src: 'assets/js/*.js',
-        dest: 'build/*.min.js'
-      }
-    },
     babel: {
         options: {
             sourceMap: false,
@@ -20,9 +11,18 @@ module.exports = function(grunt) {
         },
         dist: {
             files: {
-                'build/*.js': 'build/*.min.js'
+                'build/*.js': 'assets/js/*.min.js'
             }
         }
+    },
+    uglify: {
+      options: {
+        banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+      },
+      build: {
+        src: 'build/*.js',
+        dest: 'build/*.min.js'
+      }
     }
   });
 
@@ -32,6 +32,8 @@ module.exports = function(grunt) {
   // Default task(s).
   grunt.registerTask('default', ['babel', 'uglify']);
 };
+
+
 
 
 
