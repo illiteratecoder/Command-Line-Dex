@@ -487,6 +487,14 @@
 		"oAP": "\/backend\/pokefinder.php",
 		"oF": 0
 		},
+	"\/composer.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/composer-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
 	"\/images\/ball-shake.gif": {
 		"ft": 4194304,
 		"iS": 12077,
