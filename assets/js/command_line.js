@@ -1,4 +1,5 @@
 /* global setupTypewriter */
+/* eslint no-console: "off" */
 
 "use strict";
 
@@ -43,24 +44,25 @@ let n = null;  // number of the current Pokemon displayed
 document.querySelector( '[name="command"]' ).addEventListener( 'change', function() {
 	
 	this.setAttribute( "disabled", true ); 			 // disable input until type animation is finished
-	let command = this.value,  						 // the input
+	let command = this.value.trim(),  						 // the input
 		$model  = document.getElementById( 'model' );  // the animated model element
 
 	// Outputs appropriate img src for command based on what image is currently displayed
 	function cmdCtrl( cmd ) {
 
+		$model.onload = null;
 		// Regex to get suffixs of mega, alola, and shiny
 		// >> http://site.com/models/9-mega-shiny.gif
 		// >> [models/3-mega-shiny.gif, mega, shiny]
-		let re     = /(?:models\/)(?:\d{1,3})(?:\-{1}(mega|alola|attack|hat))?(?:\-{1}(shiny))?(?:\.gif)/,
+		let re     = /(?:models\/)(?:\d{1,3})(?:\-{1}(megax|megay|mega|alola|attack|hat))?(?:\-{1}(shiny))?(?:\.gif)/,
 			regExp = re.exec($model.src),
 			src    = "models/" + n;
 
-		if ( cmd === 'mega' || cmd === 'alola' || cmd === 'attack' || cmd === 'hat' ) {
+		if ( cmd === 'mega' || cmd === 'megax' || cmd === 'megay' || cmd === 'alola' || cmd === 'attack' || cmd === 'hat' ) {
 			if ( regExp[1] === undefined || regExp[1] !== cmd ) {
 				src += "-" + cmd;
 
-				if ( cmd === 'mega' || cmd === 'alola' ) {
+				if ( cmd === 'mega' || cmd === 'megax' || cmd === 'megay' || cmd === 'alola' ) {
 					if ( regExp[2] !== undefined ) {
 						src += "-" + regExp[2];  // if pokemon is already shiny, keep it shiny
 					}
@@ -81,7 +83,7 @@ document.querySelector( '[name="command"]' ).addEventListener( 'change', functio
 			else if ( regExp[1] === 'attack' || regExp[1] === 'hat' ) {
 				src += "-" + cmd;
 			}
-			else if ( regExp[1] === 'mega' || regExp[1] === 'alola' ) {
+			else if ( regExp[1] === 'mega' || regExp[1] === 'megax' || regExp[1] === 'megay' || regExp[1] === 'alola' ) {
 				src += "-" + regExp[1];  // if pokemon is already mega or alolan, keep it that way
 
 				if ( regExp[2] === undefined ) {
@@ -130,36 +132,10 @@ document.querySelector( '[name="command"]' ).addEventListener( 'change', functio
 	this.value = '';
 	this.blur();
 
-	// Attack command
-		if ( command === 'attack' ) {
-			cmdCtrl( 'attack' );
+	// Process command if not a pokemon name or not a real command.
+		if ( command === 'mega' || command === 'megax' || command === 'megay' || command === 'alola' || command === 'attack' || command === 'hat' || command === 'shiny' || command === 'relax'  ) {
+			cmdCtrl( command );
 		}
-
-	// Shiny command
-		else if ( command === 'shiny' ) {
-			cmdCtrl( 'shiny' );
-		}
-
-	// Mega command
-		else if ( command === 'mega' ) {
-			cmdCtrl( 'mega' );
-		}
-
-	// Alola command
-		else if ( command === 'alola' ) {
-			cmdCtrl( 'alola' );
-		}
-
-	// Hat command (for pikachu)
-		else if (command === 'hat') {
-			cmdCtrl( 'hat' );
-		}
-
-	// Relax command
-		else if ( command === 'relax' ) {
-			cmdCtrl( 'relax' );
-		}
-
 	// Pokemon command
 		else {
 			let xhttp = new XMLHttpRequest();
@@ -191,17 +167,21 @@ document.querySelector( '[name="command"]' ).addEventListener( 'change', functio
 						res.type2 = "'" + res.type2 + "'";
 						document.getElementById('poketype2').className = "string-highlight";
 					}
-
-					$model.classList.remove("grow");
-
-					setTimeout(function(){
-						$model.onload = function() {
-							if ($model.src.substr($model.src.length - 14) !== 'ball-shake.gif'){
-								if ( command !== 'mega' || command !== 'attack' || command !== 'alola' || command !== 'shiny' || command !== 'hat' || command !== 'relax' ){
-									$model.classList.add("grow"); 
-								}
+					console.log(command);
+					const onLoad = function(){
+						console.log(command);
+						if ($model.src.substr($model.src.length - 14) !== 'ball-shake.gif'){
+							if ( command !== 'megax' || command !== 'megay' || command !== 'mega' || command !== 'attack' || command !== 'alola' || command !== 'shiny' || command !== 'hat' || command !== 'relax' ){
+								console.log(command);
+								$model.classList.add("grow"); 
+								setTimeout(function(){
+									$model.classList.remove("grow");
+								}, 600)
 							}
 						}
+					}
+					setTimeout(function(){
+						$model.onload = onLoad;
 						$model.src = "models/" + res.id + ".gif";
 						// $model.classList.add("grow");
 					}, 1600);
@@ -225,6 +205,3 @@ document.querySelector( '[name="command"]' ).addEventListener( 'change', functio
 
 	return false
 });
-
-
-

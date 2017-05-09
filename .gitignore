@@ -1,4 +1,5 @@
 .env
-.config.codekit3
+
 node_modules
+
 build

@@ -24,6 +24,12 @@
 			xsmall:	'(max-width: 480px)'
 		});
 
+	// Skel layout functionality
+		skel.layout({
+			grid: true,
+			conditionals: true
+		});
+
 	// Disable animations/transitions until everything's loaded.
 		$body.classList.add('is-loading');
 
