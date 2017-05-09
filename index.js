@@ -1,3 +1,6 @@
+/* eslint-env node */
+/* eslint no-console: "off" */
+
 var path = require('path');
 var express = require('express');
 var app = express();
@@ -17,13 +20,13 @@ app.use(bodyParser.json());
 app.set('port', (process.env.PORT || 5000));
 
 // Set public folders.
-console.log(__dirname);
-app.use('/assets', express.static(path.join(__dirname, '/assets')));
-app.use('/models', express.static(path.join(__dirname, '/images/models')));
-app.use('/images', express.static(path.join(__dirname, '/images')));
+console.log(path.join(__dirname, '/assets'));
+app.use('/assets', express.static(path.join(__dirname, 'assets')));
+app.use('/models', express.static(path.join(__dirname, 'images/models')));
+app.use('/images', express.static(path.join(__dirname, 'images')));
 
 // views is directory for all template files
-app.set('views', path.join(__dirname, '/php'));
+app.set('views', path.join(__dirname, 'php'));
 app.engine('php', phpExpress.engine);
 app.set('view engine', 'php');
 
@@ -31,7 +34,7 @@ app.set('view engine', 'php');
 app.all(/.+\.php$/, phpExpress.router);
 
 //Home Page Route
-router.get('/', function(req, res, next){
+router.get('/', function(req, res){
 	res.sendFile(path.join(__dirname, 'index.html'));
 });
 app.use('/', router);
@@ -54,7 +57,7 @@ app.use('/', router);
 
 
 //If no other express route captures path, return a 404 page
-app.use(function (req, res, next) {
+app.use(function (req, res) {
   res.status(404).send("Sorry can't find that!")
 })
 

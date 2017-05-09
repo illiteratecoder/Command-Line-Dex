@@ -1,6 +1,19 @@
 /* Dex */
+	#main {
+		max-width: 790px;
+		@include breakpoint(small){
+			max-width: 420px;
+		}
+	}
 
 	#dex {
+		font-size: 1.2em;
+		// border: solid 1px grey;
+
+		#screen {
+			border: solid 2px grey;
+			background-color: #000;
+		}
 		div#model-wrapper{
 			height: _size(dex-image);
 
@@ -30,7 +43,6 @@
 
 	}
 
-
 	.var-highlight{
     	color: #02e2f7;
 	}
@@ -57,10 +69,26 @@
 	            animation: blink 500ms linear infinite alternate;
 	        }
 	}
-	pre {
+
+	#typewriter {
+		display: none;
+	}
+
+	.target {
+		height: 312px;
+		@include breakpoint(small){
+			max-height: 35vh;
+		}
+		overflow: auto;
 		white-space: pre-wrap;       /* css-3 */
 		white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
 		white-space: -pre-wrap;      /* Opera 4-6 */
 		white-space: -o-pre-wrap;    /* Opera 7 */
 		word-wrap: break-word;       /* Internet Explorer 5.5+ */
+	}
+
+	#label {
+		color: black;
+		@include icon('\f054')
+		font-size: 15pt;
 	}

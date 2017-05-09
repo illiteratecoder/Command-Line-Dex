@@ -24,7 +24,7 @@
 		background: none;
 		// border-radius: _size(border-radius);
 		border: none;
-		border-bottom: solid 1px #0aff02;
+		border-bottom: solid 1px rgba(0,0,0,0.5);
 		// border: solid _size(border-width) _palette(border);
 		color: inherit;
 		display: inline-block;
@@ -38,8 +38,9 @@
 		}
 
 		&:focus {
-			border-color: _palette(accent1, bg);
-			box-shadow: 0 0 0 _size(border-width) _palette(accent1, bg);
+			border-color: #000;
+			border-width: 2px
+			// box-shadow: 0 1px 0 _size(border-width) #000;
 		}
 	}
 

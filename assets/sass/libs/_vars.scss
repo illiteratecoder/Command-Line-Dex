@@ -1,5 +1,13 @@
 // skel-baseline v3.0.1 | (c) n33 | skel.io | MIT licensed
-
+@import url('https://fonts.googleapis.com/css?family=PT+Mono');
+@font-face {
+	font-family: 'Pixel';
+	src: url('../fonts/pixel.ttf');
+}
+@font-face {
+	font-family: 'AO';
+	src: url('../fonts/AO.ttf')
+}
 
 // Misc.
 	$misc: (
@@ -31,9 +39,9 @@
 
 // Palette.
 	$palette: (
-		bg:					#282f30,
+		bg:					#fff,
 		fg:					#fff,
-		fg-bold:			#555,
+		fg-bold:			#E7E7E7,
 		fg-light:			#bbb,
 		border:				rgba(144,144,144,0.25),
 		border-bg:			rgba(144,144,144,0.075),
@@ -52,7 +60,7 @@
 		),
 
 		accent2: (
-			bg:				#5a5a5a,
+			bg:				#b71c1c,
 			fg:				mix(#5a5a5a, #ffffff, 25%),
 			fg-bold:		#ffffff,
 			fg-light:		mix(#5a5a5a, #ffffff, 40%),

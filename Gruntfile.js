@@ -12,7 +12,7 @@ module.exports = function(grunt) {
         format: 'codeframe'
       },
       all: {
-        src: ['Gruntfile.js', 'assets/js/*.js', '!assets/js/*.min.js']
+        src: ['Gruntfile.js', 'index.js', 'assets/js/*.js', '!assets/js/*.min.js']
       }
     },
 
@@ -69,49 +69,79 @@ module.exports = function(grunt) {
 
     // Copy files over to build folder.
     copy: {
-      dist: {
-        files: [
-          // copy minified JS files
-          { expand: true, src: 'assets/js/*.min.js', dest: 'build/' },
-          // copy minified CSS files
-          { expand: true, src: 'assets/css/*.min.css', dest: 'build/' },
-          // copy font files
-          { expand: true, src: 'assets/fonts/*', dest: 'build/' },
-          // copy images
-          { expand: true, src: 'images/**/*', dest: 'build/' },
-          // copy php
-          { expand: true, src: 'php/**/*', dest: 'build/' },
-          // copy files
-          { expand: true, src: ['*'], dest: 'build/', filter: 'isFile'}
-
-        ]
-      }
+      // copy minified JS files
+      js: { src: 'assets/js/*.min.js', dest: 'build/' },
+      // copy minified CSS files
+      css: { src: 'assets/css/*.min.css', dest: 'build/' },
+      // copy font files
+      fonts: { src: 'assets/fonts/*', dest: 'build/' },
+      // copy images
+      images: { src: 'images/**/*', dest: 'build/' },
+      // copy php
+      php: { src: 'php/**/*', dest: 'build/' },
+      // copy everything else in root directory
+      all: { src: ['*'], dest: 'build/', filter: 'isFile' }
     },
 
-    // Check syntax when file changes.
+    // Run the appropriate process whenever a file changes.
     watch: {
-      scripts: {
-        files: ['Gruntfile.js', 'assets/js/*.js', '!assets/js/*.min.js'],
-        tasks: ['newer:eslint:all'],
-        options: {
-          spawn: false
-        }
+      options: {
+        livereload: true
       },
-      css: {
+      scripts: {
+        files: ['Gruntfile.js', 'index.js'],
+        tasks: ['newer:eslint:all'],
+        options: { spawn: false }
+      },
+      minify: {
+        files: ['assets/js/*.js', '!assets/js/*.min.js'],
+        tasks: ['minify'],
+        options: { spawn: false }
+      },
+      sass: {
         files: ['assets/sass/**/*.scss'],
         tasks: ['sass'],
-        options: {
-          spawn: false
-        }
-      }
+        options: { spawn: false }
+      },
+      js: {
+        files: ['assets/js/*.min.js'],
+        tasks: ['newer:copy:js'],
+        options: { spawn: false }
+      },
+      css: {
+        files: ['assets/css/*.min.css'],
+        tasks: ['newer:copy:css'],
+        options: { spawn: false }
+      },
+      fonts: {
+        files: ['assets/fonts/*'],
+        tasks: ['newer:copy:fonts'],
+        options: { spawn: false }
+      },
+      images: {
+        files: ['images/**/*'],
+        tasks: ['newer:copy:images'],
+        options: { spawn: false }
+      },
+      php: {
+        files: ['php/**/*'],
+        tasks: ['newer:copy:php'],
+        options: { spawn: false }
+      },
+      all: {
+        files: ['*'],
+        tasks: ['newer:copy:all'],
+        options: { spawn: false }
+      },
     }
-
   });
 
   // Load the plugins.
   require('load-grunt-tasks')(grunt);
 
-  // Default task(s).
+  // Default task(s). Check syntax when running locally.
+  grunt.registerTask('server', ['connect'], ['watch']);
+  grunt.registerTask('minify', ['eslint', 'concat', 'babel', 'uglify']);
   grunt.registerTask('local', ['eslint', 'concat', 'babel', 'uglify', 'sass', 'copy']);
   grunt.registerTask('heroku', ['concat', 'babel', 'uglify', 'sass', 'copy']);
 };
