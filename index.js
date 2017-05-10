@@ -5,7 +5,7 @@ var path = require('path'),
 	express = require('express'),
 	app = express(),
 	router = express.Router(),
-	bodyParser = require('body-parser'),
+	bodyParser = require('body-parser');
 
 // Change path for php so it works on heroku and locally.
 var phpPath = 'php';
