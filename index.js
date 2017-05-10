@@ -23,6 +23,7 @@ app.set('port', (process.env.PORT || 5000));
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
 app.use('/models', express.static(path.join(__dirname, 'images/models')));
 app.use('/images', express.static(path.join(__dirname, 'images')));
+app.use('/favicon.ico', express.static(path.join(__dirname, 'favicon.ico')));
 
 // Views is the directory for all template files.
 app.set('views', path.join(__dirname, 'php'));
@@ -36,12 +37,10 @@ app.all(/.+\.php$/, phpExpress.router);
 router.get('/', function(req, res){
 	res.sendFile(path.join(__dirname, 'index.html'));
 });
-router.get('/favicon.ico', function(req, res){
-	res.sendFile(path.join(__dirname, 'favicon.ico'));
-});
 
 // Send all requests to router.
 app.use('/', router);
+
 
 // If no other express route captures a path, return a 404 page.
 app.use(function (req, res) {
