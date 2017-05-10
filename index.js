@@ -40,7 +40,7 @@ router.get('/', function(req, res){
 // Send all requests to router.
 app.use('/', router);
 
-router.get('/favicon.ico'. function(req, res){
+router.get('/favicon.ico', function(req, res){
 	res.sendFile(path.join(__dirname, 'favicon.ico'));
 });
 
