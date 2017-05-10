@@ -6,7 +6,6 @@ var path = require('path'),
 	app = express(),
 	router = express.Router(),
 	bodyParser = require('body-parser'),
-	favicon = require('serve-favicon');
 
 // Change path for php so it works on heroku and locally.
 var phpPath = 'php';
@@ -41,7 +40,6 @@ router.get('/', function(req, res){
 
 // Send all requests to router.
 app.use('/', router);
-
 
 // If no other express route captures a path, return a 404 page.
 app.use(function (req, res) {
