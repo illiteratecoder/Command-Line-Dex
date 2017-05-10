@@ -36,6 +36,9 @@ app.all(/.+\.php$/, phpExpress.router);
 router.get('/', function(req, res){
 	res.sendFile(path.join(__dirname, 'index.html'));
 });
+router.get('/favicon.ico', function(req, res){
+	res.sendFile(path.join(__dirname, 'favicon.ico'));
+});
 
 // Send all requests to router.
 app.use('/', router);
