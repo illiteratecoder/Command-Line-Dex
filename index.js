@@ -33,16 +33,16 @@ app.set('view engine', 'php');
 app.all(/.+\.php$/, phpExpress.router);
 
 // Set home page.
-router.get('/', function(req, res){
-	res.sendFile(path.join(__dirname, 'index.html'));
-});
-
-// Send all requests to router.
-app.use('/', router);
 
 router.get('/favicon.ico', function(req, res){
 	res.sendFile(path.join(__dirname, 'favicon.ico'));
 });
+
+router.get('/', function(req, res){
+	res.sendFile(path.join(__dirname, 'index.html'));
+});
+// Send all requests to router.
+app.use('/', router);
 
 
 // If no other express route captures a path, return a 404 page.
