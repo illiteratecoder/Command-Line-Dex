@@ -5,7 +5,8 @@ var path = require('path'),
 	express = require('express'),
 	app = express(),
 	router = express.Router(),
-	bodyParser = require('body-parser');
+	bodyParser = require('body-parser'),
+	favicon = require('serve-favicon');
 
 // Change path for php so it works on heroku and locally.
 var phpPath = 'php';
@@ -23,6 +24,7 @@ app.set('port', (process.env.PORT || 5000));
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
 app.use('/models', express.static(path.join(__dirname, 'images/models')));
 app.use('/images', express.static(path.join(__dirname, 'images')));
+app.use(favicon(path.join(__dirname, 'favicon.ico')));
 
 // Views is the directory for all template files.
 app.set('views', path.join(__dirname, 'php'));
