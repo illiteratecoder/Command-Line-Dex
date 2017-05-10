@@ -3,6 +3,10 @@
 
 "use strict";
 
+// Preload pokeball image.
+let img = new Image();
+img.src = 'images/ball-shake.gif';
+
 // Creates an element for the typewriter effect
 function createTemplate( string, err=false ) {
 
