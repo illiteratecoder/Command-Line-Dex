@@ -50,7 +50,7 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          '<%= concat.dist.dest %>': ['<%= concat.dist.dest %>'],
+          '<%= concat.dist.dest %>': ['<%= concat.dist.dest %>']
         }
       }
     },

@@ -15,14 +15,17 @@
 			background-color: #000;
 		}
 		#move {
+			min-height: 195px;
 			@include breakpoint(xsmall){
-				max-height: 35vh;
+
+				max-height: 40vh;
 			}
 		}
 		div#model-wrapper{
 			height: 100%;
-
 			position: relative;
+
+
 
 			> img#model {
 				position: absolute;
