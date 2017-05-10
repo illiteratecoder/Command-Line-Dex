@@ -14,8 +14,13 @@
 			border: solid 2px grey;
 			background-color: #000;
 		}
+		#move {
+			@include breakpoint(xsmall){
+				max-height: 35vh;
+			}
+		}
 		div#model-wrapper{
-			height: _size(dex-image);
+			height: 100%;
 
 			position: relative;
 
@@ -78,6 +83,9 @@
 		height: 312px;
 		@include breakpoint(small){
 			max-height: 35vh;
+		}
+		@include breakpoint(xsmall){
+			max-height: 33vh;
 		}
 		overflow: auto;
 		white-space: pre-wrap;       /* css-3 */
