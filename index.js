@@ -23,7 +23,6 @@ app.set('port', (process.env.PORT || 5000));
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
 app.use('/models', express.static(path.join(__dirname, 'images/models')));
 app.use('/images', express.static(path.join(__dirname, 'images')));
-app.use(favicon(path.join(__dirname, 'images/favicon.ico')));
 
 // Views is the directory for all template files.
 app.set('views', path.join(__dirname, 'php'));
