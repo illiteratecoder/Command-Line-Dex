@@ -4,8 +4,6 @@ node_modules
 
 main.min.css
 
-config.php
-
 command-line-dex.min.js
 
 build
