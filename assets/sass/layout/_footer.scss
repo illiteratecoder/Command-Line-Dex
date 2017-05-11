@@ -21,8 +21,10 @@
 			font-size: 0.85em;
 		}
 		@media screen and (max-height: 565px) {
-			position: static;
-			margin-top: 20px;
+			@include breakpoint(xsmall){
+				position: static;
+				margin-top: 20px;
+			}
 		}
 		.copyright {
 			color: _palette(accent2, fg-light);
