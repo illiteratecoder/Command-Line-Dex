@@ -147,7 +147,7 @@ document.querySelector( '[name="command"]' ).addEventListener( 'change', functio
 				if ( this.readyState === 4 && this.status === 200 ) {
 					let res = JSON.parse(this.responseText);
 
-					if ( res === null ) {
+					if ( res === null || res === '404') {
 						let content = createTemplate(command, 404);
 						fixTypewriter(content);
 

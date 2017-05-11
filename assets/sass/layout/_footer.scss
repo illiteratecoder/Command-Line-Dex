@@ -21,7 +21,7 @@
 			font-size: 0.85em;
 		}
 		@media screen and (max-height: 565px) {
-			@include breakpoint(xsmall){
+			@include breakpoint(small){
 				position: static;
 				margin-top: 20px;
 			}
