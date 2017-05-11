@@ -20,6 +20,10 @@
 		@include breakpoint(small) {
 			font-size: 0.85em;
 		}
+		@media screen and (max-height: 565px) {
+			position: static;
+			margin-top: 20px;
+		}
 		.copyright {
 			color: _palette(accent2, fg-light);
 			font-size: 0.9em;
