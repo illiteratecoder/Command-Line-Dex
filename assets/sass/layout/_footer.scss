@@ -18,10 +18,7 @@
 			color: _palette(accent2, fg);
 		}
 		@include breakpoint(small) {
-			font-size: 0.83em;
-		}
-		@include breakpoint(xsmall) {
-			font-size: 0.7em;
+			font-size: 0.85em;
 		}
 		.copyright {
 			color: _palette(accent2, fg-light);
