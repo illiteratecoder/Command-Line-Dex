@@ -1,0 +1,28 @@
+// Command Line Dex | github.com/illiteratecoder/Command-Line-Dex | Jeremy Ephron
+
+/* General Classes */
+
+	.transparent {
+		opacity: 0;
+	}
+
+	.hidden {
+		display: none;
+	}
+
+	.float-left {
+		float: left;
+
+		&:after {
+			clear: both;
+		}
+	}
+
+	.float-right {
+
+		float: right;
+
+		&:after {
+			clear: both;
+		}
+	}

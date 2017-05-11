@@ -1,12 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=PT+Mono');
-@font-face {
-	font-family: 'Pixel';
-	src: url('../fonts/pixel.ttf');
-}
-@font-face {
-	font-family: 'AO';
-	src: url('../fonts/AO.ttf')
-}
+// Command Line Dex | github.com/illiteratecoder/Command-Line-Dex | Jeremy Ephron
 
 // Misc.
 	$misc: (
@@ -25,12 +17,12 @@
 		border-width:		1px,
 		element-height:		2.75em,
 		element-margin:		2em,
-		dex-image: 			175px,
+		dex-image: 			175px
 	);
 
 // Font.
 	$font: (
-		family:				('Courier New', monospace),
+		family:				(Arial, Helvetica, sans-serif),
 		family-fixed:		('Courier New', monospace),
 		weight:				normal,
 		weight-bold:		bold
@@ -38,20 +30,20 @@
 
 // Palette.
 	$palette: (
-		bg:					#fff,
+		bg:					#b51919,
 		fg:					#fff,
-		fg-bold:			#E7E7E7,
-		fg-light:			#bbb,
-		border:				rgba(144,144,144,0.25),
-		border-bg:			rgba(144,144,144,0.075),
+		fg-bold:			#EFEFEF,
+		fg-light:			#DFDFDF,
+		border:				rgba(255,255,255, 0.35),
+		border-bg:			rgba(144,144,144,0.1),
 		border2:			rgba(144,144,144,0.5),
 		border2-bg:			rgba(144,144,144,0.2),
 
 		accent1: (
-			bg:				#5AA6ED,
-			fg:				mix(#5AA6ED, #ffffff, 25%),
-			fg-bold:		#ffffff,
-			fg-light:		mix(#5AA6ED, #ffffff, 40%),
+			bg:				#f2f1f1,
+			fg:				mix(#f2f1f1, #000, 25%),
+			fg-bold:		#000,
+			fg-light:		mix(#f2f1f1, #000, 40%),
 			border:			rgba(255,255,255,0.25),
 			border-bg:		rgba(255,255,255,0.075),
 			border2:		rgba(255,255,255,0.5),
@@ -59,10 +51,10 @@
 		),
 
 		accent2: (
-			bg:				#fff,
-			fg:				#000,
-			fg-bold:		#000,
-			fg-light:		mix(#5a5a5a, #ffffff, 40%),
+			bg:				#594947,
+			fg:				mix(#594947, #ffffff, 25%),
+			fg-bold:		#fff,
+			fg-light:		mix(#594947, #ffffff, 40%),
 			border:			rgba(255,255,255,0.15),
 			border-bg:		rgba(255,255,255,0.075),
 			border2:		rgba(255,255,255,0.5),

@@ -1,5 +1,4 @@
 /* global setupTypewriter */
-/* eslint no-console: "off" */
 
 "use strict";
 
@@ -7,10 +6,10 @@
 let img = new Image();
 img.src = 'images/ball-shake.gif';
 
-// Creates an element for the typewriter effect
+// Creates an element for the typewriter effect.
 function createTemplate( string, err=false ) {
 
-	let start = '<pre data-target="copy" data-opt="append">',
+	let start = '<pre data-target="target" data-opt="append">',
 		end   = '\n</pre>',
 		middle;
 
@@ -33,7 +32,7 @@ function createTemplate( string, err=false ) {
 }
 
 
-// Sets up the typewriter and starts the type animation
+// Sets up the typewriter and starts the type animation.
 function fixTypewriter( content ){
 
 	let typewriter = setupTypewriter( content );
@@ -44,11 +43,11 @@ function fixTypewriter( content ){
 
 let n = null;  // number of the current Pokemon displayed
 
-// Run when command line input value changes (hits return or clicks off)
+// Run when command line input value changes (hits return or clicks off).
 document.querySelector( '[name="command"]' ).addEventListener( 'change', function() {
 	
-	this.setAttribute( "disabled", true ); 			 // disable input until type animation is finished
-	let command = this.value.trim(),  						 // the input
+	this.setAttribute( "disabled", true ); 			   // disable input until type animation is finished
+	let command = this.value.trim().toLowerCase(),  				   // the input
 		$model  = document.getElementById( 'model' );  // the animated model element
 
 	// Outputs appropriate img src for command based on what image is currently displayed
@@ -171,12 +170,9 @@ document.querySelector( '[name="command"]' ).addEventListener( 'change', functio
 						res.type2 = "'" + res.type2 + "'";
 						document.getElementById('poketype2').className = "string-highlight";
 					}
-					console.log(command);
 					const onLoad = function(){
-						console.log(command);
 						if ($model.src.substr($model.src.length - 14) !== 'ball-shake.gif'){
 							if ( command !== 'megax' || command !== 'megay' || command !== 'mega' || command !== 'attack' || command !== 'alola' || command !== 'shiny' || command !== 'hat' || command !== 'relax' ){
-								console.log(command);
 								$model.classList.add("grow"); 
 								setTimeout(function(){
 									$model.classList.remove("grow");
@@ -187,7 +183,6 @@ document.querySelector( '[name="command"]' ).addEventListener( 'change', functio
 					setTimeout(function(){
 						$model.onload = onLoad;
 						$model.src = "models/" + res.id + ".gif";
-						// $model.classList.add("grow");
 					}, 1600);
 
 					document.getElementById( 'name'        ).innerHTML = res.name;

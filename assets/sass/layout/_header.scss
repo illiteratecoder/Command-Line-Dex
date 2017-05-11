@@ -1,3 +1,5 @@
+// Command Line Dex | github.com/illiteratecoder/Command-Line-Dex | Jeremy Ephron
+
 /* Header */
 
 	body {
@@ -5,8 +7,8 @@
 	}
 
 	#header {
-		background: darken(_palette(accent2, bg), 6);
-		color: _palette(accent2, fg);
+		background: darken(_palette(accent1, bg), 5);
+		color: _palette(accent1, fg);
 		cursor: default;
 		height: 3.25em;
 		left: 0;
@@ -16,10 +18,9 @@
 		top: 0;
 		width: 100%;
 		z-index: _misc(z-index-base) + 1;
-		box-shadow: 0 0 1.5em 0 rgba(0,0,0,0.2);
 
 		> h1 {
-			color: _palette(accent2, fg-bold);
+			color: _palette(accent1, fg-bold);
 			display: inline-block;
 			height: inherit;
 			left: 1.25em;
@@ -30,7 +31,7 @@
 			top: 0;
 
 			a {
-				font-size: 1em;
+				font-size: 1.25em;
 			}
 		}
 
@@ -42,7 +43,7 @@
 			text-decoration: none;
 
 			&:hover {
-				color: _palette(accent2, fg-bold);
+				color: _palette(accent1, fg-bold);
 			}
 
 			&[href="#nav"] {
@@ -55,7 +56,7 @@
 			}
 
 			& + a[href="#nav"]:last-child {
-				border-left: solid 1px _palette(accent2, border);
+				border-left: solid 1px _palette(accent1, border);
 				padding-left: 1.25em;
 				margin-left: 0.5em;
 			}

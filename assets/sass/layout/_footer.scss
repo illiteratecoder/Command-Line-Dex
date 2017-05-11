@@ -1,14 +1,31 @@
+// Command Line Dex | github.com/illiteratecoder/Command-Line-Dex | Jeremy Ephron
+
 /* Footer */
 
 	#footer {
-		@include padding(4em, 0);
-		background: #f2f2f2;
-
+		position: fixed;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		padding-top: 0.3em;
+		padding-bottom: 0.3em;
+		background: _palette(accent2, bg);
+		color: _palette(accent2, fg);
+		h1, h2, h3, h4, h5, h6 {
+			color: _palette(accent2, fg-bold);
+		}
+		hr {
+			color: _palette(accent2, fg);
+		}
+		@include breakpoint(small) {
+			font-size: 0.83em;
+		}
+		@include breakpoint(xsmall) {
+			font-size: 0.7em;
+		}
 		.copyright {
-			color: _palette(fg-light);
+			color: _palette(accent2, fg-light);
 			font-size: 0.9em;
-			margin: 0 0 _size(element-margin) 0;
-			padding: 0;
 			text-align: center;
 
 			li {
@@ -27,8 +44,6 @@
 		}
 
 		@include breakpoint(small) {
-			@include padding(3em, 0);
-
 			.copyright {
 				li {
 					display: block;
