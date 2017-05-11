@@ -1,31 +1,32 @@
+// Command Line Dex | github.com/illiteratecoder/Command-Line-Dex | Jeremy Ephron
+
 /* Type */
 
 	body, input, select, textarea {
 		color: _palette(fg);
-		font-family: _font(family);
-		font-size: 11pt;
+		font-family: _font(family-fixed);
+		font-size: 13pt;
 		font-weight: _font(weight);
 		line-height: 1.65;
-		letter-spacing: 0px;
 
 		@include breakpoint(xlarge) {
-			font-size: 11pt;
+			font-size: 12pt;
 		}
 
 		@include breakpoint(large) {
-			font-size: 11pt;
+			font-size: 12pt;
 		}
 
 		@include breakpoint(medium) {
-			font-size: 11pt;
+			font-size: 12pt;
 		}
 
 		@include breakpoint(small) {
-			font-size: 11pt;
+			font-size: 12pt;
 		}
 
 		@include breakpoint(xsmall) {
-			font-size: 11pt;
+			font-size: 12pt;
 		}
 	}
 
@@ -117,7 +118,6 @@
 		font-family: _font(family-fixed);
 		font-size: 0.9em;
 		margin: 0 0 _size(element-margin) 0;
-		padding-bottom: 5px;
 
 		code {
 			display: block;
@@ -147,21 +147,4 @@
 
 	.align-right {
 		text-align: right;
-	}
-
-	.float-left {
-		float: left;
-
-		&:after {
-			clear: both;
-		}
-	}
-
-	.float-right {
-
-		float: right;
-
-		&:after {
-			clear: both;
-		}
 	}

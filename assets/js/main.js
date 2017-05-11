@@ -90,27 +90,4 @@
 					$nav.classList.remove('visible');
 
 				});
-
 })();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

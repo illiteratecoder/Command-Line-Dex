@@ -1,105 +1,130 @@
+// Command Line Dex | github.com/illiteratecoder/Command-Line-Dex | Jeremy Ephron
+
 /* Dex */
-	#main {
-		max-width: 790px;
-		@include breakpoint(small){
-			max-width: 420px;
-		}
-	}
 
 	#dex {
 		font-size: 1.2em;
-		// border: solid 1px grey;
 
-		#screen {
-			border: solid 2px grey;
-			background-color: #000;
-		}
-		#move {
-			min-height: 195px;
-			@include breakpoint(xsmall){
-
-				max-height: 40vh;
+		// Left side of dex
+			#command-wrapper {
+				background-color: _palette(accent1, bg);
+				padding: 0.45em 0.45em 0 0.45em;
+				border-radius: _size(border-radius)*2 _size(border-radius)*2 _size(border-radius) _size(border-radius);
 			}
-		}
-		div#model-wrapper{
-			height: 100%;
-			position: relative;
 
+			#screen {
+				background-color: #000;
+				margin-bottom: 0.4em;
+			}
 
+			// Typewriter
+			#target{
+				margin: 0 8px 0 15px;
+				height: 16.5em;
+				@include breakpoint(small){
+					max-height: 35vh;
+				}
+				@include breakpoint(xsmall){
+					max-height: 30vh;
+					font-size: 0.8em;
+				}
+				padding: 5px 0;
+				overflow: auto;
+				white-space: pre-wrap;       /* css-3 */
+				white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+				white-space: -pre-wrap;      /* Opera 4-6 */
+				white-space: -o-pre-wrap;    /* Opera 7 */
+				word-wrap: break-word;       /* Internet Explorer 5.5+ */
 
-			> img#model {
-				position: absolute;
-				margin: 0 auto;
-				bottom: 5px;
-				right: 0;
-				left: 0;
-				@include vendor('transform-origin', 'center bottom')
+		        &:after{
+		            content: "|";
+		            @include keyframes('blink') {
+						0%{opacity: 0;}
+						100%{opacity: 1;}
+					};
+		            animation: blink _duration(nav) linear infinite alternate;
+		        }
 
-				&.grow {
-					animation: grow 300ms ease-in 1;
+				.var-highlight{
+			    	color: #02e2f7;
+				}
+				.string-highlight{
+				    color: #ff9e3d;
+				}
+				.int-highlight{
+					color: #a160d6;
+				}
+				.err-highlight{
+					color: #e0202f;
+				}
+			}
+
+			// Command input
+			#label {
+				color: #000;
+				@include icon('\f054')
+				font-size: 15pt;
+			}
+
+			input[name="command"] {
+				border-radius: _size(border-radius)/2;
+				border: none;
+				border-bottom: solid _size(border-width) rgba(0,0,0,0.5);
+				text-decoration: none;
+				height: 1.75em;
+				color: #000;
+
+				&:focus {
+					background-color: rgba(0,0,0,0.1);
+					border-color: rgba(0,0,0,0.5);
+					box-shadow: 0 0 0 _size(border-width) rgba(0,0,0,0.5);
+				}
+			}
+
+		// Right side of dex
+
+			#pokemon-wrapper {
+				border: solid _size(border-width)*4 _palette(accent1, bg); 
+				border-radius: _size(border-radius)*2;
+				background-color: #000;
+				height: 12.5em;
+				@include padding(0.8em, 1.2em)
+				@include breakpoint(xsmall){
+					max-height: 40vh;
+					min-height: 195px;
+				}
+			}
+
+			div#model-wrapper{
+				height: 100%;
+				position: relative;
+
+				> img#model {
+					position: absolute;
+					margin: 0 auto;
+					bottom: 10px;
+					right: 0;
+					left: 0;
+					@include vendor('transform-origin', 'center bottom')
+
+					&.grow {
+						animation: grow _duration(nav) ease 1;
+					}
 				}
 
+				@include keyframes('grow') {
+					0%{ @include vendor('transform', 'scale(0)')}
+					100%{ @include vendor('transform', 'scale(1)')}
+				};
 			}
 
-			@include keyframes('grow') {
-				0%{ @include vendor('transform', 'scale(0)')}
-				100%{ @include vendor('transform', 'scale(1)')}
-			};
-
-
+			#info {
+				height: 5.65em;
+				border: solid _size(border-width)*4 _palette(accent1, bg);
+				border-radius: _size(border-radius)*2;
+				background-color: #000;
+				margin-top: 1em;
+				@include padding(1em, 1em)
+				font-size: 0.75em;
+			}
 		}
-
-	}
-
-	.var-highlight{
-    	color: #02e2f7;
-	}
-	.string-highlight{
-	    color: #ff9e3d;
-	}
-	.int-highlight{
-		color: #a160d6;
-	}
-	.err-highlight{
-		color: #e0202f;
-	}
-
-	.target{
-	        margin: 0;
-	        font-family: "Courier New";
-
-	        &:after{
-	            content: "|";
-	            @include keyframes('blink') {
-					0%{opacity: 0;}
-					100%{opacity: 1;}
-				};
-	            animation: blink 500ms linear infinite alternate;
-	        }
-	}
-
-	#typewriter {
-		display: none;
-	}
-
-	.target {
-		height: 312px;
-		@include breakpoint(small){
-			max-height: 35vh;
-		}
-		@include breakpoint(xsmall){
-			max-height: 33vh;
-		}
-		overflow: auto;
-		white-space: pre-wrap;       /* css-3 */
-		white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
-		white-space: -pre-wrap;      /* Opera 4-6 */
-		white-space: -o-pre-wrap;    /* Opera 7 */
-		word-wrap: break-word;       /* Internet Explorer 5.5+ */
-	}
-
-	#label {
-		color: black;
-		@include icon('\f054')
-		font-size: 15pt;
-	}

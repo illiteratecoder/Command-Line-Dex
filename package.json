@@ -9,22 +9,22 @@
     "php",
     "pokemon"
   ],
-  "homepage": "",
+  "homepage": "commandlinedex.herokuapp.com",
   "bugs": {
-    "url": ""
+    "url": "https://github.com/illiteratecoder/Command-Line-Dex/issues"
   },
   "license": "MIT",
   "author": "Jeremy Barenholtz <illiteratecoder@gmail.com>",
   "engines": {
-    "node": ""
+    "node": "^6.3.1"
   },
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/illiteratecoder/Command-Line-Dex"
   },
   "scripts": {
-    "start": "node build/index.js",
+    "start": "node index.js",
     "postinstall": "grunt heroku"
   },
   "dependencies": {

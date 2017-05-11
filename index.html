@@ -1,14 +1,15 @@
 <!DOCTYPE HTML>
-<!-- Command Line Dex by Jeremy Ephron Barenholtz -->
+<!-- Command Line Dex | github.com/illiteratecoder/Command-Line-Dex | Jeremy Ephron -->
+
 <html>
 	<head>
 		<meta charset="utf-8" />
 		<title>Command Line Dex</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="icon" href="images/favicon.ico">
+		<link rel="shortcut icon" href="images/favicon.ico">
 		<link rel="stylesheet" href="assets/css/main.min.css" />
 	</head>
-	<body id="top" style="background-color:#b51919 ; background-size: cover">
+	<body id="top">
 
 		<!-- Header -->
 			<header id="header">
@@ -22,6 +23,7 @@
 					<li>Contains first 151 Pokemon!</li>
 					<br/>
 					<li>Commands:</li>
+					<li>&nbsp;<em>pokemon name</em>,</li>
 					<li>&nbsp;<em>shiny</em>,</li>
 					<li>&nbsp;<em>mega</em>,</li>
 					<li>&nbsp;<em>alola</em>,</li>
@@ -41,19 +43,19 @@
 				<!-- Dex -->
 					<div id="dex" class="row uniform">
 						<div class="6u 12u$(small)">
-							<div style="background-color: #eaeaea; padding: 10px 10px 0px 10px; border-radius: 15px 15px 0 0">
-								<pre id="typewriter" data-target="copy" data-opt="append">
+							<div id="command-wrapper">
+								<pre id="typewriter" class="hidden" data-target="target" data-opt="append">
 <span class="var-highlight">var</span> newPokemon = {
-    name: <span id="pokename" class="string-highlight">'Bulbasaur'</span>,
-    number: <span id="pokenum" class="int-highlight">1</span>,
-    type: [<span id="poketype1" class="string-highlight">'Grass'</span>, <span id="poketype2" class="string-highlight">'Poison'</span>],
-    species: <span id="pokespecies" class="string-highlight">'Seed Pokemon'</span>
+    name: <span id="pokename" class="string-highlight">'Name'</span>,
+    number: <span id="pokenum" class="int-highlight">0</span>,
+    type: [<span id="poketype1" class="string-highlight">'Type1'</span>, <span id="poketype2" class="string-highlight">'Type2'</span>],
+    species: <span id="pokespecies" class="string-highlight">'Pokemon'</span>
 };
 </pre>
-								<div style="outline-offset: 0; background-color: #000; padding: 0 15px 0 15px; margin-bottom: 10px;">
-									<pre id="copy" class="target"></pre>
+								<div id="screen">
+									<pre id="target"></pre>
 								</div>
-								<div class="row uniform" style="color: black;">
+								<div class="row uniform">
 									<div class="1u">
 											<label id="label" for="command"></label>
 									</div>
@@ -64,21 +66,30 @@
 							</div>
 						</div>
 						<div class="6u$ 12u$(small) important(small)">
-							<div id="move" style="border: solid 4px #eaeaea; border-radius: 15px; background-color: #000; height: 240px; padding: 20px 30px;">
+							<div id="pokemon-wrapper">
 								<span id="name" class="float-left">???</span>
 								<span id="number" class="float-right">#?</span>
-								<div id="model-wrapper" style="margin-top: 16px;">
+								<div id="model-wrapper">
 									<img id="model" src="images/ball-spin.gif" />
 								</div>
 
 							</div>
-							<div class="align-center not-small" style="height: 108px; border: solid 4px #eaeaea; border-radius: 15px; background-color: #000; margin-top: 20px; padding: 24px 10px 0 10px; font-size: 11pt">
+							<div id="info" class="align-center not-small">
 								Type a command! If you need help click the Commands tab above.
 							</div>
 						</div>
 					</div>
 			</div>
-
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<div class="row">
+						<div class="12u$ align-center">
+						Jeremy Ephron | github.com/illiteratecoder
+						</div>
+					</div>
+				</div>
+			</footer>
 		<!-- Scripts -->
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/skel-layout.min.js"></script>

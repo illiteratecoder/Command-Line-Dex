@@ -73,4 +73,3 @@ const setupTypewriter = function(t) {
     
     return {type: type}
 }
-
