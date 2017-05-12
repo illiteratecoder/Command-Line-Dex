@@ -1,6 +1,10 @@
 # Command Line Dex
 An interactive Pokedex of the first 151 Pokemon made using Node.js, MySql, and PHP.
 
+### Site Preview
+
+![Site Demo](docs/demo.gif)
+
 ### Thanks
 - All the Pokemon sprites were obtained from [pkparaiso.com](https://pkparaiso.com).  
 - Used AJLKN's [skel](https://skel.io) for site's responsiveness.  
