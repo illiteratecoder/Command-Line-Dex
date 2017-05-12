@@ -164,11 +164,13 @@ document.querySelector( '[name="command"]' ).addEventListener( 'change', functio
 
 					if ( !res.type2 ) {
 						res.type2 = "null";
-						document.getElementById('poketype2').className = "int-highlight";
+						document.querySelector( '#typewriter .poketype2' ).classList.remove("string-highlight");
+						document.querySelector( '#typewriter .poketype2' ).classList.add("int-highlight");
 					}
 					else {
 						res.type2 = "'" + res.type2 + "'";
-						document.getElementById('poketype2').className = "string-highlight";
+						document.querySelector( '#typewriter .poketype2' ).classList.remove("int-highlight");
+						document.querySelector( '#typewriter .poketype2' ).classList.add("string-highlight");
 					}
 					const onLoad = function(){
 						if ($model.src.substr($model.src.length - 14) !== 'ball-shake.gif'){
@@ -185,13 +187,13 @@ document.querySelector( '[name="command"]' ).addEventListener( 'change', functio
 						$model.src = "models/" + res.id + ".gif";
 					}, 1600);
 
-					document.getElementById( 'name'        ).innerHTML = res.name;
-					document.getElementById( 'number'      ).innerHTML = '#' + res.id;
-					document.getElementById( 'pokename'    ).innerHTML = "'" + res.name + "'";
-					document.getElementById( 'pokenum'     ).innerHTML = res.id;
-					document.getElementById( 'poketype1'   ).innerHTML = "'" + res.type1 + "'";
-					document.getElementById( 'poketype2'   ).innerHTML = res.type2;
-					document.getElementById( 'pokespecies' ).innerHTML = "'" + res.species + "'";
+					document.querySelector( '#name' ).innerHTML = res.name;
+					document.querySelector( '#number' ).innerHTML = '#' + res.id;
+					document.querySelector( '#typewriter .pokename' ).innerHTML = "'" + res.name + "'";
+					document.querySelector( '#typewriter .pokenum' ).innerHTML = res.id;
+					document.querySelector( '#typewriter .poketype1' ).innerHTML = "'" + res.type1 + "'";
+					document.querySelector( '#typewriter .poketype2' ).innerHTML = res.type2;
+					document.querySelector( '#typewriter .pokespecies' ).innerHTML = "'" + res.species + "'";
 
 					let typewriter = document.getElementById('typewriter');
 				    fixTypewriter(typewriter);
